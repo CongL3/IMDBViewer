@@ -16,6 +16,9 @@
 		4C431A50262C0CF3009288D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C431A4E262C0CF3009288D3 /* LaunchScreen.storyboard */; };
 		4C431A5B262C0CF3009288D3 /* IMDBViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C431A5A262C0CF3009288D3 /* IMDBViewerTests.swift */; };
 		4C431A66262C0CF4009288D3 /* IMDBViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C431A65262C0CF4009288D3 /* IMDBViewerUITests.swift */; };
+		4C431A77262C167D009288D3 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C431A76262C167D009288D3 /* keys.plist */; };
+		4C431A7C262C210A009288D3 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C431A7B262C210A009288D3 /* Film.swift */; };
+		4C431A84262C2BFA009288D3 /* FilmResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C431A80262C27FE009288D3 /* FilmResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		4C431A61262C0CF4009288D3 /* IMDBViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMDBViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C431A65262C0CF4009288D3 /* IMDBViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBViewerUITests.swift; sourceTree = "<group>"; };
 		4C431A67262C0CF4009288D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C431A76262C167D009288D3 /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		4C431A7B262C210A009288D3 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		4C431A80262C27FE009288D3 /* FilmResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FilmResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				4C431A40262C0CEF009288D3 /* AppDelegate.swift */,
+				4C431A7B262C210A009288D3 /* Film.swift */,
 				4C431A42262C0CEF009288D3 /* SceneDelegate.swift */,
 				4C431A44262C0CEF009288D3 /* ViewController.swift */,
 				4C431A46262C0CEF009288D3 /* Main.storyboard */,
@@ -109,6 +116,8 @@
 				4C431A4E262C0CF3009288D3 /* LaunchScreen.storyboard */,
 				4C431A51262C0CF3009288D3 /* Info.plist */,
 				4C431A49262C0CEF009288D3 /* IMDBViewer.xcdatamodeld */,
+				4C431A76262C167D009288D3 /* keys.plist */,
+				4C431A80262C27FE009288D3 /* FilmResponse.json */,
 			);
 			path = IMDBViewer;
 			sourceTree = "<group>";
@@ -234,9 +243,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C431A77262C167D009288D3 /* keys.plist in Resources */,
 				4C431A50262C0CF3009288D3 /* LaunchScreen.storyboard in Resources */,
 				4C431A4D262C0CF3009288D3 /* Assets.xcassets in Resources */,
 				4C431A48262C0CEF009288D3 /* Main.storyboard in Resources */,
+				4C431A84262C2BFA009288D3 /* FilmResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C431A7C262C210A009288D3 /* Film.swift in Sources */,
 				4C431A45262C0CEF009288D3 /* ViewController.swift in Sources */,
 				4C431A4B262C0CEF009288D3 /* IMDBViewer.xcdatamodeld in Sources */,
 				4C431A41262C0CEF009288D3 /* AppDelegate.swift in Sources */,
