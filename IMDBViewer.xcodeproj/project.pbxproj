@@ -19,6 +19,7 @@
 		4C431A77262C167D009288D3 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C431A76262C167D009288D3 /* keys.plist */; };
 		4C431A7C262C210A009288D3 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C431A7B262C210A009288D3 /* Film.swift */; };
 		4C431A84262C2BFA009288D3 /* FilmResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C431A80262C27FE009288D3 /* FilmResponse.json */; };
+		4C431A89262C353A009288D3 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C431A88262C353A009288D3 /* Rating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4C431A76262C167D009288D3 /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		4C431A7B262C210A009288D3 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		4C431A80262C27FE009288D3 /* FilmResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FilmResponse.json; sourceTree = "<group>"; };
+		4C431A88262C353A009288D3 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				4C431A40262C0CEF009288D3 /* AppDelegate.swift */,
 				4C431A7B262C210A009288D3 /* Film.swift */,
+				4C431A88262C353A009288D3 /* Rating.swift */,
 				4C431A42262C0CEF009288D3 /* SceneDelegate.swift */,
 				4C431A44262C0CEF009288D3 /* ViewController.swift */,
 				4C431A46262C0CEF009288D3 /* Main.storyboard */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C431A89262C353A009288D3 /* Rating.swift in Sources */,
 				4C431A7C262C210A009288D3 /* Film.swift in Sources */,
 				4C431A45262C0CEF009288D3 /* ViewController.swift in Sources */,
 				4C431A4B262C0CEF009288D3 /* IMDBViewer.xcdatamodeld in Sources */,

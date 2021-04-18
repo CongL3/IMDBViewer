@@ -5,21 +5,22 @@
 //  Created by Cong Le on 18/04/2021.
 //
 
+struct Film: Codable {
+	var title: String
+	var year: String
+	var rated: String
+	var released: String
+	var ratings: [Rating]
+	var poster: String
 
-struct Film : Codable {
-	var title : String
-	var year : String
-	var rated : String
-	var released : String
-	
 	enum CodingKeys: String, CodingKey {
 		case title = "Title"
 		case year = "Year"
 		case rated = "Rated"
 		case released = "Released"
+		case ratings = "Ratings"
+		case poster = "Poster"
 	}
-	
-
 }
 
 
