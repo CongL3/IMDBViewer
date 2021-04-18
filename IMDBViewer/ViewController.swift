@@ -25,11 +25,20 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
 		collectionView.collectionViewLayout = layout
-
-
-		collectionView.reloadData()
 	}
 	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		performSegue(withIdentifier: "showMovieDetails", sender: viewModel.movies[indexPath.row])
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "showMovieDetails" {
+			if let viewController = segue.destination as? MovieDetailViewController {
+				viewController.movie = (sender as? Movie)!
+			}
+		}
+	}
+
 	
 	func loadKeys() {
 		if let path = Bundle.main.path(forResource: "keys", ofType: "plist") {

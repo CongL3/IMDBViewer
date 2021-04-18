@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FTK-LU-mA4" customClass="MovieDetailsHeaderCell" customModule="IMDBViewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-aj-iAS">
+                    <rect key="frame" x="20" y="15" width="142" height="185"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="f7i-aj-iAS" secondAttribute="height" multiplier="142:185" id="bQj-KZ-b8n"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmR-mb-6ba" userLabel="Director">
+                    <rect key="frame" x="182" y="15" width="212" height="21"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYQ-hm-q6k" userLabel="Director name">
+                    <rect key="frame" x="182" y="44" width="212" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="rjt-67-LHg"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wYQ-hm-q6k" secondAttribute="trailing" constant="20" id="391-Bt-g9z"/>
+                <constraint firstItem="VmR-mb-6ba" firstAttribute="top" secondItem="FTK-LU-mA4" secondAttribute="top" constant="15" id="3Xh-cQ-Xui"/>
+                <constraint firstItem="f7i-aj-iAS" firstAttribute="top" secondItem="FTK-LU-mA4" secondAttribute="top" constant="15" id="Hg9-LR-NfE"/>
+                <constraint firstAttribute="trailing" secondItem="VmR-mb-6ba" secondAttribute="trailing" constant="20" id="Jfa-pV-7x9"/>
+                <constraint firstItem="wYQ-hm-q6k" firstAttribute="leading" secondItem="f7i-aj-iAS" secondAttribute="trailing" constant="20" id="gs3-ge-NGq"/>
+                <constraint firstItem="VmR-mb-6ba" firstAttribute="leading" secondItem="f7i-aj-iAS" secondAttribute="trailing" constant="20" id="iNo-tw-h40"/>
+                <constraint firstItem="wYQ-hm-q6k" firstAttribute="top" secondItem="VmR-mb-6ba" secondAttribute="bottom" constant="8" symbolic="YES" id="m4a-yr-MEy"/>
+                <constraint firstItem="f7i-aj-iAS" firstAttribute="leading" secondItem="FTK-LU-mA4" secondAttribute="leading" constant="20" id="nYx-ca-20K"/>
+                <constraint firstAttribute="bottom" secondItem="f7i-aj-iAS" secondAttribute="bottom" constant="20" id="tTW-iq-rfU"/>
+            </constraints>
+            <connections>
+                <outlet property="directorNameLabel" destination="VmR-mb-6ba" id="r2V-Xh-tNl"/>
+                <outlet property="imageView" destination="f7i-aj-iAS" id="Tdl-Oa-kaV"/>
+            </connections>
+            <point key="canvasLocation" x="182.60869565217394" y="56.919642857142854"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

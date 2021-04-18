@@ -32,6 +32,10 @@ extension UITableViewCell: ReusableView {
 extension UICollectionViewCell: ReusableView {
 }
 
+extension UICollectionReusableView: ReusableView {
+	
+}
+
 protocol NibLoadableView: class {
 	static var nibName: String { get }
 	static var cellIdentifier: String { get }
@@ -79,8 +83,10 @@ extension UICollectionView {
 		register(T.nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
 	}
 
-	func register<T: UICollectionViewCell>(_: T.Type, forSupplementaryViewOfKind kind: String) {
-		register(T.nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.defaultReuseIdentifier)
+	func register<T: UICollectionReusableView>(_: T.Type, forSupplementaryViewOfKind kind: String) {
+//		register(T.nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.defaultReuseIdentifier)
+		register(T.self, forSupplementaryViewOfKind: kind)
+
 	}
 
 	func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: NSIndexPath) -> T {
