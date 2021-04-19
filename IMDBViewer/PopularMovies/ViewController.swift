@@ -25,7 +25,12 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
 		collectionView.collectionViewLayout = layout
+		
+		viewModel.reloadCollectionView = {
+			self.collectionView.reloadData()
+		}
 	}
+	
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		performSegue(withIdentifier: "showMovieDetails", sender: viewModel.movies[indexPath.row])

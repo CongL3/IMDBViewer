@@ -10,24 +10,28 @@ import UIKit
 
 class MovieDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 	var movie: Movie
+	var movieTrailer: MovieTrailer
+	var cell: MovieDetailsVideoCell
+
+	private let apiService = MovieAPI.shared
+
 	
 	@IBOutlet weak var collectionView: UICollectionView!
 	required init?(coder aDecoder: NSCoder) {
 		self.movie = Movie(identifier: 0, title: "", releaseDate: "", popularity: 0, voteCount: 0, voteAverage: 1, hasVideo: false, posterPath: "", backDropPath: "", overview: "")
+		self.movieTrailer = MovieTrailer(youtubeVideoId: "")
+		
+		self.cell = MovieDetailsVideoCell.init()
+		
 		super.init(coder: aDecoder)
 	}
 
 	override func viewDidLoad() {
 		
-		print("MOVIE \(movie)")
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
 		self.collectionView.register(MovieDetailsVideoCell.self)
 		
-//		self.collectionView.register(MovieDetailsHeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
-		
-//		self.collectionView.register(MovieDetailsHeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieDetailsHeaderCell.defaultReuseIdentifier)
-
 		collectionView.register(UINib(nibName: MovieDetailsHeaderCell.defaultReuseIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieDetailsHeaderCell.defaultReuseIdentifier)
 
 		let layout = UICollectionViewFlowLayout.init()
@@ -36,7 +40,19 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
 		collectionView.collectionViewLayout = layout
-
+		
+		print("movie.identifier \(movie.identifier)")
+		
+		apiService.fetchMovieTrailer(movieId: movie.identifier, parameters: nil) { result in
+				switch result {
+				case .success(let movieTrailer):
+					guard let movieTrailer = movieTrailer.movieTrailers.first else {
+						return }
+					self.cell.setMovieTrailer(movieTrailer: movieTrailer)
+				case .failure(let error):
+					print(error.localizedDescription)
+				}
+		}
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,6 +69,7 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? MovieDetailsVideoCell {
 			cell.setViewModel(movie: movie)
+			self.cell = cell
 			return cell
 		}
 		return UICollectionViewCell()
@@ -64,7 +81,7 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 			let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieDetailsHeaderCell.defaultReuseIdentifier, for: indexPath) as? MovieDetailsHeaderCell
 			
 			header?.setViewModel(movie: movie)
-			return header as! UICollectionReusableView
+			return header!
 		}
 		
 		return UIView.init() as! UICollectionReusableView

@@ -11,10 +11,17 @@ import UIKit
 class PopularMoviesViewModel: NSObject {
 	
 	var movies = [Movie]()
-		
+	var reloadCollectionView: () -> Void
+
+	private let apiService = MovieAPI.shared
+
 	override init() {
+		self.reloadCollectionView = {
+			print("reloadCollectionView")
+		}
+		
 		super.init()
-		self.readLocalFile(forName: "FilmResponse")
+		self.fetchMovies(movieType: .popular)
 	}
 	
 	func readLocalFile(forName name: String) -> Data? {
@@ -34,6 +41,21 @@ class PopularMoviesViewModel: NSObject {
 			
 		return nil
 	}
+	
+	private func fetchMovies(movieType: MovieType) {
+
+		let parameters: [String: Any]? = ["page": 1]
+
+		apiService.fetchMovies(movieType: movieType, parameters: parameters) { [weak self] result in
+			switch result {
+			case .success(let movieListResponse):
+				self?.movies = movieListResponse.movies
+				self?.reloadCollectionView()
+			case .failure(let error):
+				print(error.localizedDescription)
+			}
+		}
+	}
 }
 
 extension PopularMoviesViewModel: UICollectionViewDataSource {
@@ -51,7 +73,4 @@ extension PopularMoviesViewModel: UICollectionViewDataSource {
 		}
 		return UICollectionViewCell()
 	}
-	
-	
-	
 }

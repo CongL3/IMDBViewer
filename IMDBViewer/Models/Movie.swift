@@ -4,6 +4,13 @@
 //
 //  Created by Cong Le on 18/04/2021.
 //
+
+enum MovieType: String, CaseIterable {
+	case topRated = "Top Rated"
+	case upcoming = "Upcoming"
+	case popular = "Popular"
+}
+
 struct MovieListResponse: Decodable {
 
 	let currentPage: Int?

@@ -26,6 +26,13 @@ class MovieDetailsVideoCell: UICollectionViewCell {
 		print("MovieDetailsVideoCell \(movie)")
 		self.titleLabel.text = movie.title
 		self.overViewLabel.text = movie.overview
-		self.ytViewer.load(withVideoId: "odM92ap8_c0")
+	}
+	
+	func setMovieTrailer(movieTrailer: MovieTrailer) {
+		if movieTrailer.youtubeVideoId == "" {
+			return
+		}
+		
+		self.ytViewer.load(withVideoId: movieTrailer.youtubeVideoId)
 	}
 }

@@ -19,18 +19,6 @@ class PopularMovieCell: UICollectionViewCell {
 	
 	@IBOutlet weak var widthConstraint: NSLayoutConstraint!
 	
-
-	//	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//		super.init(style: style, reuseIdentifier: SettingsCell.cellIdentifier)
-//	}
-
-	
-//	required init?(coder aDecoder: NSCoder) {
-//		super.init(coder: aDecoder)
-//		self.backgroundColor = UIColor.clear
-//		selectionStyle = .none
-//	}
-	
 	func setViewModel(movie: Movie) {
 		print("MOVIEEEE \(movie)")
 		self.widthConstraint.constant = UIScreen.main.bounds.width - 60
@@ -44,27 +32,5 @@ class PopularMovieCell: UICollectionViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		self.backgroundColor = UIColor.gray
-		
-//		contentView.translatesAutoresizingMaskIntoConstraints = false
-//		
-//		NSLayoutConstraint.activate([
-//			contentView.leftAnchor.constraint(equalTo: leftAnchor),
-//			contentView.rightAnchor.constraint(equalTo: rightAnchor),
-//			contentView.topAnchor.constraint(equalTo: topAnchor),
-//			contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
-//		])
-
 	}
-
-//	override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-//		setNeedsLayout()
-//		layoutIfNeeded()
-//		let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
-//		var newFrame = layoutAttributes.frame
-//		// note: don't change the width
-//		newFrame.size.height = ceil(size.height)
-//		layoutAttributes.frame = newFrame
-//		return layoutAttributes
-//	}
-
 }
