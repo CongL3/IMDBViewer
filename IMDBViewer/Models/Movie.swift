@@ -38,6 +38,12 @@ struct Movie: Codable {
 	let backDropPath: String?
 	let overview: String
 	
+	var posterUrl: String {
+		get {
+			return "https://image.tmdb.org/t/p/w500/\(self.posterPath ?? "pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg")"
+		}
+	}
+	
 
 	private enum CodingKeys: String, CodingKey {
 		case identifier = "id"

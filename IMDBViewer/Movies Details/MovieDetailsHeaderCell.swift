@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class MovieDetailsHeaderCell: UICollectionReusableView {
 	@IBOutlet weak var imageView: UIImageView!
@@ -29,9 +30,7 @@ class MovieDetailsHeaderCell: UICollectionReusableView {
 	}
 
 	func setViewModel(movie: Movie) {
-		print("MovieDetailsVideoCell \(movie)")
-		
-		self.imageView.downloaded(from: "https://image.tmdb.org/t/p/w500/\(movie.posterPath ?? "pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg")")
+		self.imageView.kf.setImage(with: URL(string: movie.posterUrl))
 		self.directorNameLabel.text = "\(movie.identifier)"
 	}
 

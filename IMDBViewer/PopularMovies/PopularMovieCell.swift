@@ -22,7 +22,9 @@ class PopularMovieCell: UICollectionViewCell {
 	func setViewModel(movie: Movie) {
 		print("MOVIEEEE \(movie)")
 		self.widthConstraint.constant = UIScreen.main.bounds.width - 60
-		self.posterImageView.downloaded(from: "https://image.tmdb.org/t/p/w500/\(movie.posterPath ?? "pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg")")
+
+		self.posterImageView.kf.setImage(with: URL(string: movie.posterUrl))
+
 		self.titleLabel.text = movie.title
 		self.ratingsLabel.text = "\(movie.voteAverage)/10"
 		self.releaseDateLabel.text = movie.releaseDate
