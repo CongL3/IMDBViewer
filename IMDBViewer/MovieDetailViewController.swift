@@ -19,7 +19,6 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 
 	override func viewDidLoad() {
 		
-		
 		print("MOVIE \(movie)")
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
@@ -37,8 +36,6 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
 		collectionView.collectionViewLayout = layout
-		layout.sectionHeadersPinToVisibleBounds = true
-
 
 	}
 	

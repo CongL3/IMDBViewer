@@ -7,9 +7,11 @@
 
 import Foundation
 import UIKit
+import youtube_ios_player_helper
 
 class MovieDetailsVideoCell: UICollectionViewCell {
 	
+	@IBOutlet weak var ytViewer: YTPlayerView!
 	@IBOutlet weak var customView: UIView!
 	@IBOutlet weak var overViewLabel: UILabel!
 	@IBOutlet weak var overviewTitleLabel: UILabel!
@@ -24,5 +26,6 @@ class MovieDetailsVideoCell: UICollectionViewCell {
 		print("MovieDetailsVideoCell \(movie)")
 		self.titleLabel.text = movie.title
 		self.overViewLabel.text = movie.overview
+		self.ytViewer.load(withVideoId: "odM92ap8_c0")
 	}
 }

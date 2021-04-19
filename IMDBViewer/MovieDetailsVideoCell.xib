@@ -35,7 +35,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH5-19-zqn">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH5-19-zqn" customClass="YTPlayerView">
                         <rect key="frame" x="20" y="61" width="300" height="160"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -66,6 +66,7 @@
                 <outlet property="overViewLabel" destination="9do-Wm-LhE" id="G3L-Pp-wWf"/>
                 <outlet property="overviewTitleLabel" destination="ZCo-FR-5a3" id="Fm7-Kl-iYe"/>
                 <outlet property="titleLabel" destination="nZB-oq-BvD" id="h78-G4-kNb"/>
+                <outlet property="ytViewer" destination="xH5-19-zqn" id="GtB-Bm-BXb"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="78.683035714285708"/>
         </collectionViewCell>

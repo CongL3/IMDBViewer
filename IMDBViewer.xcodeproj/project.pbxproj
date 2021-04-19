@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		4C431A7C262C210A009288D3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C431A7B262C210A009288D3 /* Movie.swift */; };
 		4C431A84262C2BFA009288D3 /* FilmResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C431A80262C27FE009288D3 /* FilmResponse.json */; };
 		4C431A89262C353A009288D3 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C431A88262C353A009288D3 /* Rating.swift */; };
+		4CA3BF0D262D67A700F5FCB8 /* Pods_IMDBViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8977261474D3629FFF4E4011 /* Pods_IMDBViewer.framework */; };
 		4CB007D7262CD02200B7ECAB /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB007D6262CD02200B7ECAB /* MovieDetailViewController.swift */; };
 		4CB007DC262CD4E300B7ECAB /* MovieDetailsVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB007DB262CD4E300B7ECAB /* MovieDetailsVideoCell.swift */; };
 		4CB007E1262CD4F100B7ECAB /* MovieDetailsVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB007E0262CD4F100B7ECAB /* MovieDetailsVideoCell.xib */; };
@@ -31,6 +32,8 @@
 		4CC366A1262CA4B800E76C25 /* PopularMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC366A0262CA4B800E76C25 /* PopularMoviesViewModel.swift */; };
 		4CC366A6262CA5A800E76C25 /* PopularMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC366A5262CA5A800E76C25 /* PopularMovieCell.swift */; };
 		4CC366AB262CA5B400E76C25 /* PopularMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC366AA262CA5B400E76C25 /* PopularMovieCell.xib */; };
+		A9523D28C3DD2808799C2A45 /* Pods_IMDBViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FC8AD6C18C81FEBD7D5522 /* Pods_IMDBViewerTests.framework */; };
+		C4FCEE1FE0A3AC7CD047A5C0 /* Pods_IMDBViewer_IMDBViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBA8380D422B687B224DF9B /* Pods_IMDBViewer_IMDBViewerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AAC4947F9F8FC779B611E99 /* Pods-IMDBViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBViewerTests.release.xcconfig"; path = "Target Support Files/Pods-IMDBViewerTests/Pods-IMDBViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		4C431A3D262C0CEF009288D3 /* IMDBViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMDBViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C431A40262C0CEF009288D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C431A42262C0CEF009288D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 		4C431A7B262C210A009288D3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		4C431A80262C27FE009288D3 /* FilmResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FilmResponse.json; sourceTree = "<group>"; };
 		4C431A88262C353A009288D3 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		4CA3BF12262D67C900F5FCB8 /* youtube-ios-player-helper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "youtube-ios-player-helper"; path = "Pods/youtube-ios-player-helper"; sourceTree = "<group>"; };
 		4CB007D6262CD02200B7ECAB /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		4CB007DB262CD4E300B7ECAB /* MovieDetailsVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsVideoCell.swift; sourceTree = "<group>"; };
 		4CB007E0262CD4F100B7ECAB /* MovieDetailsVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsVideoCell.xib; sourceTree = "<group>"; };
@@ -81,6 +86,14 @@
 		4CC366A0262CA4B800E76C25 /* PopularMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewModel.swift; sourceTree = "<group>"; };
 		4CC366A5262CA5A800E76C25 /* PopularMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieCell.swift; sourceTree = "<group>"; };
 		4CC366AA262CA5B400E76C25 /* PopularMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieCell.xib; sourceTree = "<group>"; };
+		6771A15E3791534EF1EB82B6 /* Pods-IMDBViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-IMDBViewerTests/Pods-IMDBViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8977261474D3629FFF4E4011 /* Pods_IMDBViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D8BD36E1F56B13ABCC5F2FA /* Pods-IMDBViewer-IMDBViewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBViewer-IMDBViewerUITests.debug.xcconfig"; path = "Target Support Files/Pods-IMDBViewer-IMDBViewerUITests/Pods-IMDBViewer-IMDBViewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		98FC8AD6C18C81FEBD7D5522 /* Pods_IMDBViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A585BD79913A3E95C49A6CDC /* Pods-IMDBViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBViewer.debug.xcconfig"; path = "Target Support Files/Pods-IMDBViewer/Pods-IMDBViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		A66F2FD0916E14EF0C318463 /* Pods-IMDBViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBViewer.release.xcconfig"; path = "Target Support Files/Pods-IMDBViewer/Pods-IMDBViewer.release.xcconfig"; sourceTree = "<group>"; };
+		DABF06FA2858E7A67BB250E3 /* Pods-IMDBViewer-IMDBViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBViewer-IMDBViewerUITests.release.xcconfig"; path = "Target Support Files/Pods-IMDBViewer-IMDBViewerUITests/Pods-IMDBViewer-IMDBViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EDBA8380D422B687B224DF9B /* Pods_IMDBViewer_IMDBViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBViewer_IMDBViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA3BF0D262D67A700F5FCB8 /* Pods_IMDBViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9523D28C3DD2808799C2A45 /* Pods_IMDBViewerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,12 +117,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FCEE1FE0A3AC7CD047A5C0 /* Pods_IMDBViewer_IMDBViewerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E3A3E305BE29EB44F2FCBF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A585BD79913A3E95C49A6CDC /* Pods-IMDBViewer.debug.xcconfig */,
+				A66F2FD0916E14EF0C318463 /* Pods-IMDBViewer.release.xcconfig */,
+				8D8BD36E1F56B13ABCC5F2FA /* Pods-IMDBViewer-IMDBViewerUITests.debug.xcconfig */,
+				DABF06FA2858E7A67BB250E3 /* Pods-IMDBViewer-IMDBViewerUITests.release.xcconfig */,
+				6771A15E3791534EF1EB82B6 /* Pods-IMDBViewerTests.debug.xcconfig */,
+				3AAC4947F9F8FC779B611E99 /* Pods-IMDBViewerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4C431A34262C0CEE009288D3 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +144,8 @@
 				4C431A59262C0CF3009288D3 /* IMDBViewerTests */,
 				4C431A64262C0CF4009288D3 /* IMDBViewerUITests */,
 				4C431A3E262C0CEF009288D3 /* Products */,
+				1E3A3E305BE29EB44F2FCBF7 /* Pods */,
+				F8A58BEAFA3D07FBB6778C16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +207,17 @@
 			path = IMDBViewerUITests;
 			sourceTree = "<group>";
 		};
+		F8A58BEAFA3D07FBB6778C16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CA3BF12262D67C900F5FCB8 /* youtube-ios-player-helper */,
+				8977261474D3629FFF4E4011 /* Pods_IMDBViewer.framework */,
+				EDBA8380D422B687B224DF9B /* Pods_IMDBViewer_IMDBViewerUITests.framework */,
+				98FC8AD6C18C81FEBD7D5522 /* Pods_IMDBViewerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C431A6A262C0CF4009288D3 /* Build configuration list for PBXNativeTarget "IMDBViewer" */;
 			buildPhases = (
+				AE5A3C930B8C2B5EAFF49F9E /* [CP] Check Pods Manifest.lock */,
 				4C431A39262C0CEF009288D3 /* Sources */,
 				4C431A3A262C0CEF009288D3 /* Frameworks */,
 				4C431A3B262C0CEF009288D3 /* Resources */,
+				E74BCFCDC052F8A83F6E729D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C431A6D262C0CF4009288D3 /* Build configuration list for PBXNativeTarget "IMDBViewerTests" */;
 			buildPhases = (
+				74608555DC679DC52D5F586A /* [CP] Check Pods Manifest.lock */,
 				4C431A52262C0CF3009288D3 /* Sources */,
 				4C431A53262C0CF3009288D3 /* Frameworks */,
 				4C431A54262C0CF3009288D3 /* Resources */,
@@ -218,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C431A70262C0CF4009288D3 /* Build configuration list for PBXNativeTarget "IMDBViewerUITests" */;
 			buildPhases = (
+				39372718B8936DC2022EAAB0 /* [CP] Check Pods Manifest.lock */,
 				4C431A5D262C0CF4009288D3 /* Sources */,
 				4C431A5E262C0CF4009288D3 /* Frameworks */,
 				4C431A5F262C0CF4009288D3 /* Resources */,
+				AF60A5BB57DB4AE68C3F976E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,6 +352,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39372718B8936DC2022EAAB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMDBViewer-IMDBViewerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74608555DC679DC52D5F586A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMDBViewerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE5A3C930B8C2B5EAFF49F9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMDBViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF60A5BB57DB4AE68C3F976E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMDBViewer-IMDBViewerUITests/Pods-IMDBViewer-IMDBViewerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMDBViewer-IMDBViewerUITests/Pods-IMDBViewer-IMDBViewerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IMDBViewer-IMDBViewerUITests/Pods-IMDBViewer-IMDBViewerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E74BCFCDC052F8A83F6E729D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMDBViewer/Pods-IMDBViewer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMDBViewer/Pods-IMDBViewer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IMDBViewer/Pods-IMDBViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C431A39262C0CEF009288D3 /* Sources */ = {
@@ -497,6 +647,7 @@
 		};
 		4C431A6B262C0CF4009288D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A585BD79913A3E95C49A6CDC /* Pods-IMDBViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +667,7 @@
 		};
 		4C431A6C262C0CF4009288D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A66F2FD0916E14EF0C318463 /* Pods-IMDBViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -535,6 +687,7 @@
 		};
 		4C431A6E262C0CF4009288D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6771A15E3791534EF1EB82B6 /* Pods-IMDBViewerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +710,7 @@
 		};
 		4C431A6F262C0CF4009288D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AAC4947F9F8FC779B611E99 /* Pods-IMDBViewerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +733,7 @@
 		};
 		4C431A71262C0CF4009288D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D8BD36E1F56B13ABCC5F2FA /* Pods-IMDBViewer-IMDBViewerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -599,6 +754,7 @@
 		};
 		4C431A72262C0CF4009288D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABF06FA2858E7A67BB250E3 /* Pods-IMDBViewer-IMDBViewerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
