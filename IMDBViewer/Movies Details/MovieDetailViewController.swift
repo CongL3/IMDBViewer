@@ -53,6 +53,17 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 					print(error.localizedDescription)
 				}
 		}
+		
+		apiService.fetchMovieCastCrew(movieId: movie.identifier, parameters: nil) { result in
+			switch result {
+			case .success(let movieCastCrewInfo):
+				print("movieCastCrewInfo \(movieCastCrewInfo)")
+			case .failure(let error):
+				print(error.localizedDescription)
+			}
+		}
+
+		
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
