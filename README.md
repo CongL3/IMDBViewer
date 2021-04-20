@@ -2,7 +2,8 @@
 Creating a simple app to parse and show films from IMDB
 
 
-Uses these Pods 
+Uses these Pods
+
 youtube-ios-player-helper, Alamofire, Kingfisher
 
 Current screenshots
