@@ -16,3 +16,4 @@ ToDo :
 * Add actors to the movie details page
 * Add functionality to switch between popular, top rated and upcoming movies
 * Reskin
+* Make readme more presentable
