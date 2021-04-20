@@ -12,9 +12,32 @@ class MovieDetailViewModel: NSObject {
 	var movie: Movie
 	var movieTrailer: MovieTrailer
 	var movieCastCrewInfo: MovieDetailCastCrewInfo
-	var directorsName: String = ""
-	var producerName: String = ""
+	private var director: MovieCrew
+
+	var directorsName: String {
+		get {
+			return director.memberName
+		}
+	}
+	var directorsTitle: String {
+		get {
+			return director.memberJob
+		}
+	}
+
+	var producerName: String {
+		get {
+			return producer.memberName
+		}
+	}
+	var producerTitle: String {
+		get {
+			return producer.memberJob
+		}
+	}
 	
+	private var producer: MovieCrew
+
 	var updateDetailsCell: () -> Void
 	var updateTrailerCell: () -> Void
 
@@ -24,6 +47,8 @@ class MovieDetailViewModel: NSObject {
 		self.movie = Movie.init(identifier: 0, title: "", releaseDate: "", popularity: 0.00, voteCount: 0, voteAverage: 0.00, hasVideo: false, posterPath: nil, backDropPath: nil, overview: "")
 		self.movieTrailer = MovieTrailer.init(youtubeVideoId: "")
 		self.movieCastCrewInfo = MovieDetailCastCrewInfo.init(movieCrew: [MovieCrew](), movieCast: [MovieCast]())
+		self.producer = MovieCrew(memberName: "", memberJob: "")
+		self.director = MovieCrew(memberName: "", memberJob: "")
 		self.updateDetailsCell = {}
 		self.updateTrailerCell = {}
 		super.init()
@@ -35,13 +60,13 @@ class MovieDetailViewModel: NSObject {
 			switch result {
 			case .success(let movieCastCrewInfo):
 					print(movieCastCrewInfo)
-				self.directorsName = movieCastCrewInfo.movieCrew.first(where: { movieCrewMember in
+				self.director = movieCastCrewInfo.movieCrew.first(where: { movieCrewMember in
 						movieCrewMember.memberJob == "Director"
-				})!.memberName
-				self.producerName = movieCastCrewInfo.movieCrew.first(where: { movieCrewMember in
+				})!
+				self.producer = movieCastCrewInfo.movieCrew.first(where: { movieCrewMember in
 						movieCrewMember.memberJob == "Executive Producer" || movieCrewMember.memberJob == "Co-Executive Producer"
 							|| movieCrewMember.memberJob == "Director"
-				})!.memberName
+				})!
 				self.updateDetailsCell()
 
 			case .failure(let error):

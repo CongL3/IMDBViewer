@@ -40,7 +40,7 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 		collectionView.reloadData()
 		
 		viewModel.updateDetailsCell = {
-			self.headerCell?.setViewModel(movie: self.viewModel.movie)
+			self.headerCell?.setViewModel(viewModel: self.viewModel)
 		}
 		
 		viewModel.updateTrailerCell = {
@@ -64,7 +64,7 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 		let cellIdentifier = MovieDetailsVideoCell.defaultReuseIdentifier
 
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? MovieDetailsVideoCell {
-			cell.setViewModel(movie: viewModel.movie)
+			cell.setViewModel(movie: self.viewModel.movie)
 			self.detailsCell = cell
 			return cell
 		}
@@ -76,7 +76,7 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 		if (kind == UICollectionView.elementKindSectionHeader) {
 			let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieDetailsHeaderCell.defaultReuseIdentifier, for: indexPath) as? MovieDetailsHeaderCell
 			self.headerCell = header
-			header?.setViewModel(movie: viewModel.movie)
+			header?.setViewModel(viewModel: viewModel)
 			return header!
 		}
 		

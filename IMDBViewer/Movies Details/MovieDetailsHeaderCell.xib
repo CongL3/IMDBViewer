@@ -33,22 +33,43 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwH-rE-LsH" userLabel="Director name">
+                    <rect key="frame" x="182" y="73" width="212" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lks-Mp-MCK" userLabel="Director name">
+                    <rect key="frame" x="182" y="102" width="212" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="rjt-67-LHg"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="wYQ-hm-q6k" secondAttribute="trailing" constant="20" id="391-Bt-g9z"/>
                 <constraint firstItem="VmR-mb-6ba" firstAttribute="top" secondItem="FTK-LU-mA4" secondAttribute="top" constant="15" id="3Xh-cQ-Xui"/>
+                <constraint firstItem="Lks-Mp-MCK" firstAttribute="leading" secondItem="f7i-aj-iAS" secondAttribute="trailing" constant="20" id="5fn-eC-9vm"/>
                 <constraint firstItem="f7i-aj-iAS" firstAttribute="top" secondItem="FTK-LU-mA4" secondAttribute="top" constant="15" id="Hg9-LR-NfE"/>
                 <constraint firstAttribute="trailing" secondItem="VmR-mb-6ba" secondAttribute="trailing" constant="20" id="Jfa-pV-7x9"/>
+                <constraint firstItem="kwH-rE-LsH" firstAttribute="leading" secondItem="f7i-aj-iAS" secondAttribute="trailing" constant="20" id="Mzj-q0-neQ"/>
+                <constraint firstItem="rjt-67-LHg" firstAttribute="trailing" secondItem="Lks-Mp-MCK" secondAttribute="trailing" constant="20" id="U7h-u7-fNc"/>
+                <constraint firstItem="Lks-Mp-MCK" firstAttribute="top" secondItem="kwH-rE-LsH" secondAttribute="bottom" constant="8" symbolic="YES" id="auE-cQ-C4h"/>
+                <constraint firstItem="kwH-rE-LsH" firstAttribute="top" secondItem="wYQ-hm-q6k" secondAttribute="bottom" constant="8" symbolic="YES" id="cgC-aN-edI"/>
                 <constraint firstItem="wYQ-hm-q6k" firstAttribute="leading" secondItem="f7i-aj-iAS" secondAttribute="trailing" constant="20" id="gs3-ge-NGq"/>
                 <constraint firstItem="VmR-mb-6ba" firstAttribute="leading" secondItem="f7i-aj-iAS" secondAttribute="trailing" constant="20" id="iNo-tw-h40"/>
                 <constraint firstItem="wYQ-hm-q6k" firstAttribute="top" secondItem="VmR-mb-6ba" secondAttribute="bottom" constant="8" symbolic="YES" id="m4a-yr-MEy"/>
                 <constraint firstItem="f7i-aj-iAS" firstAttribute="leading" secondItem="FTK-LU-mA4" secondAttribute="leading" constant="20" id="nYx-ca-20K"/>
                 <constraint firstAttribute="bottom" secondItem="f7i-aj-iAS" secondAttribute="bottom" constant="20" id="tTW-iq-rfU"/>
+                <constraint firstItem="rjt-67-LHg" firstAttribute="trailing" secondItem="kwH-rE-LsH" secondAttribute="trailing" constant="20" id="vyq-IX-OXR"/>
             </constraints>
             <connections>
                 <outlet property="directorNameLabel" destination="VmR-mb-6ba" id="r2V-Xh-tNl"/>
+                <outlet property="directorTitleLabel" destination="wYQ-hm-q6k" id="qoA-N6-Kx0"/>
                 <outlet property="imageView" destination="f7i-aj-iAS" id="Tdl-Oa-kaV"/>
+                <outlet property="producerNameLabel" destination="kwH-rE-LsH" id="ArM-xR-hTD"/>
+                <outlet property="producerTitleLabel" destination="Lks-Mp-MCK" id="SPl-Ii-E1f"/>
             </connections>
             <point key="canvasLocation" x="182.60869565217394" y="56.919642857142854"/>
         </collectionReusableView>
