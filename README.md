@@ -6,8 +6,9 @@ Uses these Pods
 youtube-ios-player-helper, Alamofire, Kingfisher
 
 Current screenshots
-![alt text](https://github.com/CongL3/IMDBViewer/blob/main/App%20Screenshots/Movie%20Details.png?raw=true | width=100)
-![alt text](https://github.com/CongL3/IMDBViewer/blob/main/App%20Screenshots/Popular.png?raw=true | width=100)
+
+<img src="./AppScreenshots/Popular.png" width="200"> <img src="./AppScreenshots/Movie%20Details.png" width="200">
+
 
 ToDo :
 * Create a search screen
