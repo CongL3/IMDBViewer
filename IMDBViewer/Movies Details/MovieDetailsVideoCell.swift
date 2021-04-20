@@ -23,12 +23,12 @@ class MovieDetailsVideoCell: UICollectionViewCell {
 	}
 	
 	func setViewModel(movie: Movie) {
-		print("MovieDetailsVideoCell \(movie)")
 		self.titleLabel.text = movie.title
 		self.overViewLabel.text = movie.overview
 	}
 	
 	func setMovieTrailer(movieTrailer: MovieTrailer) {
+		print("setMovieTrailer \(movieTrailer.youtubeVideoId)")
 		if movieTrailer.youtubeVideoId == "" {
 			return
 		}

@@ -9,20 +9,16 @@ import Foundation
 import UIKit
 
 class MovieDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-	var movie: Movie
-	var movieTrailer: MovieTrailer
-	var cell: MovieDetailsVideoCell
-
-	private let apiService = MovieAPI.shared
-
+	var detailsCell: MovieDetailsVideoCell
+	var headerCell: MovieDetailsHeaderCell?
+	var viewModel: MovieDetailViewModel
+	
 	
 	@IBOutlet weak var collectionView: UICollectionView!
 	required init?(coder aDecoder: NSCoder) {
-		self.movie = Movie(identifier: 0, title: "", releaseDate: "", popularity: 0, voteCount: 0, voteAverage: 1, hasVideo: false, posterPath: "", backDropPath: "", overview: "")
-		self.movieTrailer = MovieTrailer(youtubeVideoId: "")
-		
-		self.cell = MovieDetailsVideoCell.init()
-		
+		self.detailsCell = MovieDetailsVideoCell()
+		self.headerCell = MovieDetailsHeaderCell()
+		self.viewModel = MovieDetailViewModel()
 		super.init(coder: aDecoder)
 	}
 
@@ -40,30 +36,19 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
 		collectionView.collectionViewLayout = layout
+				
+		collectionView.reloadData()
 		
-		print("movie.identifier \(movie.identifier)")
-		
-		apiService.fetchMovieTrailer(movieId: movie.identifier, parameters: nil) { result in
-				switch result {
-				case .success(let movieTrailer):
-					guard let movieTrailer = movieTrailer.movieTrailers.first else {
-						return }
-					self.cell.setMovieTrailer(movieTrailer: movieTrailer)
-				case .failure(let error):
-					print(error.localizedDescription)
-				}
+		viewModel.updateDetailsCell = {
+			self.headerCell?.setViewModel(movie: self.viewModel.movie)
 		}
 		
-		apiService.fetchMovieCastCrew(movieId: movie.identifier, parameters: nil) { result in
-			switch result {
-			case .success(let movieCastCrewInfo):
-				print("movieCastCrewInfo \(movieCastCrewInfo)")
-			case .failure(let error):
-				print(error.localizedDescription)
-			}
+		viewModel.updateTrailerCell = {
+			self.detailsCell.setMovieTrailer(movieTrailer: self.viewModel.movieTrailer)
 		}
-
 		
+		
+		viewModel.getMovieDetails()
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -79,8 +64,8 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 		let cellIdentifier = MovieDetailsVideoCell.defaultReuseIdentifier
 
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? MovieDetailsVideoCell {
-			cell.setViewModel(movie: movie)
-			self.cell = cell
+			cell.setViewModel(movie: viewModel.movie)
+			self.detailsCell = cell
 			return cell
 		}
 		return UICollectionViewCell()
@@ -90,8 +75,8 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 		
 		if (kind == UICollectionView.elementKindSectionHeader) {
 			let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieDetailsHeaderCell.defaultReuseIdentifier, for: indexPath) as? MovieDetailsHeaderCell
-			
-			header?.setViewModel(movie: movie)
+			self.headerCell = header
+			header?.setViewModel(movie: viewModel.movie)
 			return header!
 		}
 		

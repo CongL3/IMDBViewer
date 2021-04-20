@@ -39,18 +39,18 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "showMovieDetails" {
 			if let viewController = segue.destination as? MovieDetailViewController {
-				viewController.movie = (sender as? Movie)!
+				viewController.viewModel.movie = (sender as? Movie)!
 			}
 		}
 	}
 
 	
-	func loadKeys() {
-		if let path = Bundle.main.path(forResource: "keys", ofType: "plist") {
-			let keys = NSDictionary(contentsOfFile: path)
-			print(keys)
-		}
-	}
+//	func loadKeys() {
+//		if let path = Bundle.main.path(forResource: "keys", ofType: "plist") {
+//			let keys = NSDictionary(contentsOfFile: path)
+//			print(keys)
+//		}
+//	}
 		
 }
 
