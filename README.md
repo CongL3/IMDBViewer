@@ -17,3 +17,5 @@ ToDo :
 * Add functionality to switch between popular, top rated and upcoming movies
 * Reskin
 * Make readme more presentable
+  * Gifs instead of screenshots
+  * Show a IPhone outline 
