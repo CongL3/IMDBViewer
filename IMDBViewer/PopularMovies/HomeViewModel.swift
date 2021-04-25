@@ -8,10 +8,27 @@
 import Foundation
 import UIKit
 
-class PopularMoviesViewModel: NSObject {
+class HomeViewModel: NSObject {
 	
-	var movies = [Movie]()
+	var movies: [[Movie]] = [[],[]]
 	var reloadCollectionView: () -> Void
+	var popular: [Movie] {
+		get {
+			return movies[1]
+		}
+		
+		set(newPopular) {
+			movies.insert(newPopular, at: 1)
+		}
+	}
+	var upcoming: [Movie] {
+		get {
+			return movies[0]
+		}
+		set (newUpcoming){
+			movies.insert(newUpcoming, at: 0)
+		}
+	}
 
 	private let apiService = MovieAPI.shared
 
@@ -22,6 +39,7 @@ class PopularMoviesViewModel: NSObject {
 		
 		super.init()
 		self.fetchMovies(movieType: .popular)
+		self.fetchMovies(movieType: .upcoming)
 	}
 	
 	func readLocalFile(forName name: String) -> Data? {
@@ -32,7 +50,7 @@ class PopularMoviesViewModel: NSObject {
 
 				if let films = try? decoder.decode(MovieListResponse.self, from: data) {
 
-					self.movies = films.movies
+					self.movies[0] = films.movies
 					print("number of movies \(films.movies.count)")
 				}
 			} catch {
@@ -49,7 +67,12 @@ class PopularMoviesViewModel: NSObject {
 		apiService.fetchMovies(movieType: movieType, parameters: parameters) { [weak self] result in
 			switch result {
 			case .success(let movieListResponse):
-				self?.movies = movieListResponse.movies
+				if movieType == .upcoming {
+					self?.upcoming = movieListResponse.movies
+				}
+				if movieType == .popular {
+					self?.popular = movieListResponse.movies
+				}
 				self?.reloadCollectionView()
 			case .failure(let error):
 				print(error.localizedDescription)
@@ -58,13 +81,17 @@ class PopularMoviesViewModel: NSObject {
 	}
 }
 
-extension PopularMoviesViewModel: UICollectionViewDataSource {
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension HomeViewModel: UICollectionViewDataSource {
+	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return movies.count
 	}
 	
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return movies[section].count
+	}
+	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let movie = movies[indexPath.row]
+		let movie = movies[indexPath.section][indexPath.row]
 		let cellIdentifier = PopularMovieCell.defaultReuseIdentifier
 
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? PopularMovieCell {

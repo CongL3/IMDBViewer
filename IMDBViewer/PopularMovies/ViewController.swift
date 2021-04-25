@@ -11,7 +11,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 	
 	
 	@IBOutlet weak var collectionView: UICollectionView!
-	let viewModel = PopularMoviesViewModel()
+	let viewModel = HomeViewModel()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -33,7 +33,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 	
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		performSegue(withIdentifier: "showMovieDetails", sender: viewModel.movies[indexPath.row])
+		performSegue(withIdentifier: "showMovieDetails", sender: viewModel.movies[indexPath.section][indexPath.row])
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
