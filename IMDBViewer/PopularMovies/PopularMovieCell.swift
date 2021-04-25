@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+
+//protocol MovieCellProtocol: UICollectionViewCell {
+//	func setViewModel(viewModel: Any)
+//}
+
 class PopularMovieCell: UICollectionViewCell {
 	
 	@IBOutlet weak var posterImageView: UIImageView!
@@ -19,8 +24,8 @@ class PopularMovieCell: UICollectionViewCell {
 	
 	@IBOutlet weak var widthConstraint: NSLayoutConstraint!
 	
-	func setViewModel(movie: Movie) {
-		print("MOVIEEEE \(movie)")
+	func setViewModel(viewModel: Any) {
+		let movie = viewModel as! Movie
 		self.widthConstraint.constant = UIScreen.main.bounds.width - 60
 
 		self.posterImageView.kf.setImage(with: URL(string: movie.posterUrl))

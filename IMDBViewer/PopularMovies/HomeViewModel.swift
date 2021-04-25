@@ -8,25 +8,43 @@
 import Foundation
 import UIKit
 
+struct HomeCellViewModel {
+	var movie: [Movie] = []
+	var type: MovieType = .popular
+	var cellIdentifier: String {
+		get {
+			switch type {
+			case .popular:
+				return PopularMovieCell.defaultReuseIdentifier
+			case .upcoming:
+				return UpcomingCollectionViewCell.defaultReuseIdentifier
+			default:
+				return "UICollectionViewCell"
+			}
+		}
+	}
+}
+
 class HomeViewModel: NSObject {
 	
-	var movies: [[Movie]] = [[],[]]
+	var list: [HomeCellViewModel] = [HomeCellViewModel(), HomeCellViewModel()]
 	var reloadCollectionView: () -> Void
-	var popular: [Movie] {
+	var collectionViewDelgate: UICollectionViewDelegate?
+	var popular: HomeCellViewModel {
 		get {
-			return movies[1]
+			return list[1]
 		}
 		
 		set(newPopular) {
-			movies.insert(newPopular, at: 1)
+			list[1] = newPopular
 		}
 	}
-	var upcoming: [Movie] {
+	var upcoming: HomeCellViewModel {
 		get {
-			return movies[0]
+			return list[0]
 		}
 		set (newUpcoming){
-			movies.insert(newUpcoming, at: 0)
+			list[0] = newUpcoming
 		}
 	}
 
@@ -50,7 +68,7 @@ class HomeViewModel: NSObject {
 
 				if let films = try? decoder.decode(MovieListResponse.self, from: data) {
 
-					self.movies[0] = films.movies
+					self.list[0].movie = films.movies
 					print("number of movies \(films.movies.count)")
 				}
 			} catch {
@@ -68,10 +86,10 @@ class HomeViewModel: NSObject {
 			switch result {
 			case .success(let movieListResponse):
 				if movieType == .upcoming {
-					self?.upcoming = movieListResponse.movies
+					self?.upcoming = HomeCellViewModel.init(movie: movieListResponse.movies, type: .upcoming)
 				}
 				if movieType == .popular {
-					self?.popular = movieListResponse.movies
+					self?.popular = HomeCellViewModel.init(movie: movieListResponse.movies, type: .popular)
 				}
 				self?.reloadCollectionView()
 			case .failure(let error):
@@ -83,21 +101,42 @@ class HomeViewModel: NSObject {
 
 extension HomeViewModel: UICollectionViewDataSource {
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
-		return movies.count
+		return list.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return movies[section].count
+		if section == 0 {
+			return list[section].movie.count == 0 ? 0 : 1
+		}
+		
+		return list[section].movie.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let movie = movies[indexPath.section][indexPath.row]
-		let cellIdentifier = PopularMovieCell.defaultReuseIdentifier
+		let movie = list[indexPath.section]
+		let cellIdentifier = list[indexPath.section].cellIdentifier
 
-		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? PopularMovieCell {
-			cell.setViewModel(movie: movie)
-			return cell
+		switch list[indexPath.section].type {
+		case .upcoming:
+
+			if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.defaultReuseIdentifier, for: indexPath) as? UpcomingCollectionViewCell {
+				
+				cell.setViewModel(viewModel: list[indexPath.section])
+				cell.setCollectionViewDelegate(delegate: collectionViewDelgate as! UICollectionViewDelegate)
+				return cell
+			}
+		case .popular:
+			if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularMovieCell.defaultReuseIdentifier, for: indexPath) as? PopularMovieCell {
+					
+				cell.setViewModel(viewModel: list[indexPath.section].movie[indexPath.row])
+				
+				return cell
+			}
+
+		default:
+			return UICollectionViewCell()
 		}
+
 		return UICollectionViewCell()
 	}
 }

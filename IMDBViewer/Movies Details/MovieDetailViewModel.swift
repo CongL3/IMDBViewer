@@ -59,7 +59,6 @@ class MovieDetailViewModel: NSObject {
 		apiService.fetchMovieCastCrew(movieId: movie.identifier, parameters: nil) { result in
 			switch result {
 			case .success(let movieCastCrewInfo):
-					print(movieCastCrewInfo)
 				self.director = movieCastCrewInfo.movieCrew.first(where: { movieCrewMember in
 						movieCrewMember.memberJob == "Director"
 				})!

@@ -19,13 +19,17 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = viewModel
 
+		viewModel.collectionViewDelgate = self
 		self.collectionView.register(PopularMovieCell.self)
+		self.collectionView.register(UpcomingCollectionViewCell.self)
+		
 		let layout = UICollectionViewFlowLayout.init()
 		layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
 		collectionView.collectionViewLayout = layout
 		
+		collectionView.backgroundColor = .white
 		viewModel.reloadCollectionView = {
 			self.collectionView.reloadData()
 		}
@@ -33,7 +37,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 	
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		performSegue(withIdentifier: "showMovieDetails", sender: viewModel.movies[indexPath.section][indexPath.row])
+		performSegue(withIdentifier: "showMovieDetails", sender: viewModel.list[indexPath.section].movie[indexPath.row])
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -62,13 +62,13 @@ extension UITableView {
 		register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
 	}
 
-	func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: NSIndexPath) -> T {
-		guard let cell = dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier, for: indexPath as IndexPath) as? T else {
-			fatalError("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier)")
-		}
-
-		return cell
-	}
+//	func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: NSIndexPath) -> T {
+//		guard let cell = dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier, for: indexPath as IndexPath) as? T else {
+//			fatalError("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier)")
+//		}
+//
+//		return cell
+//	}
 }
 
 extension UICollectionView {
@@ -89,13 +89,13 @@ extension UICollectionView {
 
 	}
 
-	func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: NSIndexPath) -> T {
-		guard let cell = dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath as IndexPath) as? T else {
-			fatalError("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier)")
-		}
-
-		return cell
-	}
+//	func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: NSIndexPath) -> T {
+//		guard let cell = dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath as IndexPath) as? T else {
+//			fatalError("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier)")
+//		}
+//
+//		return cell
+//	}
 }
 
 protocol CustomCell {

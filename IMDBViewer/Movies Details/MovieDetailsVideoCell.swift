@@ -28,7 +28,6 @@ class MovieDetailsVideoCell: UICollectionViewCell {
 	}
 	
 	func setMovieTrailer(movieTrailer: MovieTrailer) {
-		print("setMovieTrailer \(movieTrailer.youtubeVideoId)")
 		if movieTrailer.youtubeVideoId == "" {
 			return
 		}
