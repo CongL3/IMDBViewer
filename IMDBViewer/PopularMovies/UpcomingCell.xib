@@ -32,7 +32,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-h8-91u">
-                                <rect key="frame" x="20" y="130.5" width="41.5" height="20.5"/>
+                                <rect key="frame" x="20" y="115" width="79.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHU-4b-2U3">
+                                <rect key="frame" x="20" y="89.5" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -42,9 +48,11 @@
                             <constraint firstAttribute="trailing" secondItem="cNz-yg-KjI" secondAttribute="trailing" id="0WC-tr-sDC"/>
                             <constraint firstItem="cNz-yg-KjI" firstAttribute="top" secondItem="gda-92-VP0" secondAttribute="top" id="BaS-TL-ytb"/>
                             <constraint firstItem="cNz-yg-KjI" firstAttribute="leading" secondItem="gda-92-VP0" secondAttribute="leading" id="FY4-gE-fja"/>
+                            <constraint firstItem="fjN-h8-91u" firstAttribute="top" secondItem="WHU-4b-2U3" secondAttribute="bottom" constant="5" id="Fps-z6-TIf"/>
                             <constraint firstItem="cfQ-hX-X1Z" firstAttribute="centerY" secondItem="gda-92-VP0" secondAttribute="centerY" id="HPP-Ei-v6j"/>
                             <constraint firstItem="cfQ-hX-X1Z" firstAttribute="leading" secondItem="gda-92-VP0" secondAttribute="leading" id="J7p-lW-4fM"/>
                             <constraint firstItem="fjN-h8-91u" firstAttribute="leading" secondItem="gda-92-VP0" secondAttribute="leading" constant="20" id="P9T-qk-tyz"/>
+                            <constraint firstItem="WHU-4b-2U3" firstAttribute="leading" secondItem="fjN-h8-91u" secondAttribute="leading" id="St9-Qe-1Kr"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fjN-h8-91u" secondAttribute="trailing" constant="20" id="a9g-gD-qLU"/>
                             <constraint firstAttribute="trailing" secondItem="cfQ-hX-X1Z" secondAttribute="trailing" id="eDo-EP-ZiB"/>
                             <constraint firstAttribute="bottom" secondItem="cNz-yg-KjI" secondAttribute="bottom" id="lD4-U9-vGe"/>
@@ -63,6 +71,7 @@
             <connections>
                 <outlet property="imageView" destination="cfQ-hX-X1Z" id="2jj-q7-m7Q"/>
                 <outlet property="mainView" destination="gda-92-VP0" id="iJF-b8-Iyk"/>
+                <outlet property="releaseDateLabel" destination="WHU-4b-2U3" id="C70-CP-Km3"/>
                 <outlet property="titleLabel" destination="fjN-h8-91u" id="suc-rJ-SGh"/>
                 <outlet property="widthConstraint" destination="cZY-CV-Gbv" id="fI9-fL-kJL"/>
             </connections>

@@ -23,11 +23,9 @@ class UpcomingCollectionViewCell: UICollectionViewCell, UICollectionViewDataSour
 		
 		let layout = UICollectionViewFlowLayout.init()
 		layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-//		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .horizontal
 		layout.itemSize = CGSize.init(width: UIScreen.main.bounds.width + 60, height: 230)
 		collectionView.collectionViewLayout = layout
-	
 	}
 
 	func setViewModel(viewModel: Any) {

@@ -27,6 +27,8 @@
 		4CB007E1262CD4F100B7ECAB /* MovieDetailsVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB007E0262CD4F100B7ECAB /* MovieDetailsVideoCell.xib */; };
 		4CB007E6262CDB1000B7ECAB /* MovieDetailsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB007E5262CDB1000B7ECAB /* MovieDetailsHeaderCell.swift */; };
 		4CB007EB262CDB2200B7ECAB /* MovieDetailsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB007EA262CDB2200B7ECAB /* MovieDetailsHeaderCell.xib */; };
+		4CC2506A263743BA00991559 /* HomeSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC25069263743BA00991559 /* HomeSectionHeader.swift */; };
+		4CC2506F263743C700991559 /* HomeSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2506E263743C700991559 /* HomeSectionHeader.xib */; };
 		4CC3669A262CA35000E76C25 /* UIImageViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC36697262CA34F00E76C25 /* UIImageViewExtentions.swift */; };
 		4CC3669B262CA35000E76C25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC36698262CA35000E76C25 /* Extensions.swift */; };
 		4CC3669C262CA35000E76C25 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC36699262CA35000E76C25 /* ReusableView.swift */; };
@@ -90,6 +92,8 @@
 		4CB007E0262CD4F100B7ECAB /* MovieDetailsVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsVideoCell.xib; sourceTree = "<group>"; };
 		4CB007E5262CDB1000B7ECAB /* MovieDetailsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsHeaderCell.swift; sourceTree = "<group>"; };
 		4CB007EA262CDB2200B7ECAB /* MovieDetailsHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsHeaderCell.xib; sourceTree = "<group>"; };
+		4CC25069263743BA00991559 /* HomeSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionHeader.swift; sourceTree = "<group>"; };
+		4CC2506E263743C700991559 /* HomeSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSectionHeader.xib; sourceTree = "<group>"; };
 		4CC36697262CA34F00E76C25 /* UIImageViewExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtentions.swift; sourceTree = "<group>"; };
 		4CC36698262CA35000E76C25 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4CC36699262CA35000E76C25 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 			children = (
 				4C431A44262C0CEF009288D3 /* ViewController.swift */,
 				4CC366A0262CA4B800E76C25 /* HomeViewModel.swift */,
+				4CC25069263743BA00991559 /* HomeSectionHeader.swift */,
+				4CC2506E263743C700991559 /* HomeSectionHeader.xib */,
 				4CC366A5262CA5A800E76C25 /* PopularMovieCell.swift */,
 				4CC366AA262CA5B400E76C25 /* PopularMovieCell.xib */,
 				4CCD115726356E6500951E83 /* UpcomingCollectionViewCell.swift */,
@@ -385,6 +391,7 @@
 				4CB007E1262CD4F100B7ECAB /* MovieDetailsVideoCell.xib in Resources */,
 				4C431A4D262C0CF3009288D3 /* Assets.xcassets in Resources */,
 				4C431A48262C0CEF009288D3 /* Main.storyboard in Resources */,
+				4CC2506F263743C700991559 /* HomeSectionHeader.xib in Resources */,
 				4C431A84262C2BFA009288D3 /* FilmResponse.json in Resources */,
 				4CCD115D26356E7100951E83 /* UpcomingCollectionViewCell.xib in Resources */,
 			);
@@ -533,6 +540,7 @@
 				4CB007E6262CDB1000B7ECAB /* MovieDetailsHeaderCell.swift in Sources */,
 				4CB007DC262CD4E300B7ECAB /* MovieDetailsVideoCell.swift in Sources */,
 				4CCD117B263578F200951E83 /* UpcomingCollectionViewCell.swift in Sources */,
+				4CC2506A263743BA00991559 /* HomeSectionHeader.swift in Sources */,
 				4C431A43262C0CEF009288D3 /* SceneDelegate.swift in Sources */,
 				4CC3669A262CA35000E76C25 /* UIImageViewExtentions.swift in Sources */,
 			);

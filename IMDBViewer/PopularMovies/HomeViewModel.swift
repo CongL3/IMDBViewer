@@ -139,4 +139,15 @@ extension HomeViewModel: UICollectionViewDataSource {
 
 		return UICollectionViewCell()
 	}
+	
+	func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+		
+//		if (kind == UICollectionView.elementKindSectionHeader) {
+//			let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: OverviewHeaderCollectionViewCell.reuseIdentifier, for: indexPath)
+//			return header
+//		}
+		
+		return UIView.init() as! UICollectionReusableView
+	}
+
 }

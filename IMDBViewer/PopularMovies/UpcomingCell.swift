@@ -14,6 +14,7 @@ class UpcomingCell: UICollectionViewCell {
 	@IBOutlet weak var mainView: UIView!
 	@IBOutlet weak var widthConstraint: NSLayoutConstraint!
 
+	@IBOutlet weak var releaseDateLabel: UILabel!
 	@IBOutlet weak var titleLabel: UILabel!
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -34,6 +35,7 @@ class UpcomingCell: UICollectionViewCell {
 		self.titleLabel.text = viewModel.title
 		self.widthConstraint.constant = UIScreen.main.bounds.width + 60
 		self.imageView.kf.setImage(with: URL(string: viewModel.posterUrl))
+		self.releaseDateLabel.text = viewModel.releaseDate
 	}
 	
 }
