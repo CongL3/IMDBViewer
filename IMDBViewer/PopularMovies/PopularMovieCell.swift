@@ -7,13 +7,13 @@
 
 import Foundation
 import UIKit
-
+import Reusable
 
 //protocol MovieCellProtocol: UICollectionViewCell {
 //	func setViewModel(viewModel: Any)
 //}
 
-class PopularMovieCell: UICollectionViewCell {
+class PopularMovieCell: UICollectionViewCell, NibReusable {
 	
 	@IBOutlet weak var posterImageView: UIImageView!
 	

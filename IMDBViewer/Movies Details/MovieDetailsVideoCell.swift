@@ -8,8 +8,9 @@
 import Foundation
 import UIKit
 import youtube_ios_player_helper
+import Reusable
 
-class MovieDetailsVideoCell: UICollectionViewCell {
+class MovieDetailsVideoCell: UICollectionViewCell, NibReusable {
 	
 	@IBOutlet weak var ytViewer: YTPlayerView!
 	@IBOutlet weak var customView: UIView!

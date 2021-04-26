@@ -7,8 +7,9 @@
 
 import Foundation
 import UIKit
+import Reusable
 
-class UpcomingCell: UICollectionViewCell {
+class UpcomingCell: UICollectionViewCell, NibReusable {
 
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var mainView: UIView!

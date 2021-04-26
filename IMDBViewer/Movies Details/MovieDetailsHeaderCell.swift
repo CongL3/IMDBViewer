@@ -8,8 +8,9 @@
 import Foundation
 import UIKit
 import Kingfisher
+import Reusable
 
-class MovieDetailsHeaderCell: UICollectionReusableView {
+class MovieDetailsHeaderCell: UICollectionReusableView, Reusable {
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var directorNameLabel: UILabel!
 	

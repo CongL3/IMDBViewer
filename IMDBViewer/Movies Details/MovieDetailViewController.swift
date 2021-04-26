@@ -26,9 +26,9 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 		
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
-		self.collectionView.register(MovieDetailsVideoCell.self)
+		self.collectionView.register(cellType: MovieDetailsVideoCell.self)
 		
-		collectionView.register(UINib(nibName: MovieDetailsHeaderCell.defaultReuseIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieDetailsHeaderCell.defaultReuseIdentifier)
+		collectionView.register(UINib(nibName: MovieDetailsHeaderCell.reuseIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieDetailsHeaderCell.reuseIdentifier)
 
 		let layout = UICollectionViewFlowLayout.init()
 		layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.width, height: 200)
@@ -61,7 +61,7 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cellIdentifier = MovieDetailsVideoCell.defaultReuseIdentifier
+		let cellIdentifier = MovieDetailsVideoCell.reuseIdentifier
 
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? MovieDetailsVideoCell {
 			cell.setViewModel(movie: self.viewModel.movie)
@@ -74,7 +74,7 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 	func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 		
 		if (kind == UICollectionView.elementKindSectionHeader) {
-			let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieDetailsHeaderCell.defaultReuseIdentifier, for: indexPath) as? MovieDetailsHeaderCell
+			let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieDetailsHeaderCell.reuseIdentifier, for: indexPath) as? MovieDetailsHeaderCell
 			self.headerCell = header
 			header?.setViewModel(viewModel: viewModel)
 			return header!

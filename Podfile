@@ -7,7 +7,7 @@ target 'IMDBViewer' do
   pod 'youtube-ios-player-helper', '~> 0.1.4'
   pod 'Alamofire', '~> 4.9.1'
   pod 'Kingfisher', '~> 4.10.1'
-	pod 'Reusable'
+	pod 'Reusable', '~> 4.1.1'
 
   # Pods for IMDBViewer
   target 'IMDBViewerTests' do

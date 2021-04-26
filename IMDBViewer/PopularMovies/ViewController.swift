@@ -22,8 +22,8 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 		self.collectionView.dataSource = viewModel
 
 		viewModel.collectionViewDelgate = self
-		self.collectionView.register(PopularMovieCell.self)
-		self.collectionView.register(UpcomingCollectionViewCell.self)
+		self.collectionView.register(cellType: PopularMovieCell.self)
+		self.collectionView.register(cellType: UpcomingCollectionViewCell.self)
 //		self.collectionView.register(HomeSectionHeader.self)
 		
 		let layout = UICollectionViewFlowLayout.init()

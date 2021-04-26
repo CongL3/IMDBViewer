@@ -7,8 +7,9 @@
 
 import Foundation
 import UIKit
+import Reusable
 
-class HomeSectionHeader: UICollectionReusableView {
+class HomeSectionHeader: UICollectionReusableView, NibReusable {
 	
 	@IBOutlet weak var titleLabel: UILabel!
 	override func awakeFromNib() {

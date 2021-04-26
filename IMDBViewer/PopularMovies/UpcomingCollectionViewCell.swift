@@ -7,8 +7,9 @@
 
 import Foundation
 import UIKit
+import Reusable
 
-class UpcomingCollectionViewCell: UICollectionViewCell, UICollectionViewDataSource {
+class UpcomingCollectionViewCell: UICollectionViewCell, UICollectionViewDataSource, NibReusable {
 	
 	
 	@IBOutlet weak var collectionView: UICollectionView!
@@ -18,7 +19,7 @@ class UpcomingCollectionViewCell: UICollectionViewCell, UICollectionViewDataSour
 		super.awakeFromNib()
 		self.backgroundColor = UIColor.gray
 		
-		self.collectionView.register(UpcomingCell.self)
+		self.collectionView.register(cellType: UpcomingCell.self)
 		self.collectionView.dataSource = self
 		
 		let layout = UICollectionViewFlowLayout.init()
@@ -49,7 +50,7 @@ class UpcomingCollectionViewCell: UICollectionViewCell, UICollectionViewDataSour
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCell.defaultReuseIdentifier, for: indexPath) as? UpcomingCell {
+		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCell.reuseIdentifier, for: indexPath) as? UpcomingCell {
 			
 			cell.setViewModel(viewModel: viewModel[indexPath.row])
 			return cell
