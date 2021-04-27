@@ -15,7 +15,7 @@ struct HomeCellViewModel {
 		get {
 			switch type {
 			case .popular:
-				return PopularMovieCell.reuseIdentifier
+				return PopularCollectionViewCell.reuseIdentifier
 			case .upcoming:
 				return UpcomingCollectionViewCell.reuseIdentifier
 			default:
@@ -105,11 +105,11 @@ extension HomeViewModel: UICollectionViewDataSource {
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		if section == 0 {
+//		if section == 0 {
 			return list[section].movie.count == 0 ? 0 : 1
-		}
+//		}
 		
-		return list[section].movie.count
+//		return list[section].movie.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -126,9 +126,10 @@ extension HomeViewModel: UICollectionViewDataSource {
 				return cell
 			}
 		case .popular:
-			if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularMovieCell.reuseIdentifier, for: indexPath) as? PopularMovieCell {
-					
-				cell.setViewModel(viewModel: list[indexPath.section].movie[indexPath.row])
+			if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.reuseIdentifier, for: indexPath) as? PopularCollectionViewCell {
+				cell.setViewModel(viewModel: list[indexPath.section])
+
+//				cell.setViewModel(viewModel: list[indexPath.section].movie[indexPath.row])
 				
 				return cell
 			}

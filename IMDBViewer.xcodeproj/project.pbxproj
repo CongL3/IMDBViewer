@@ -29,6 +29,8 @@
 		4CB007EB262CDB2200B7ECAB /* MovieDetailsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB007EA262CDB2200B7ECAB /* MovieDetailsHeaderCell.xib */; };
 		4CC2506A263743BA00991559 /* HomeSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC25069263743BA00991559 /* HomeSectionHeader.swift */; };
 		4CC2506F263743C700991559 /* HomeSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2506E263743C700991559 /* HomeSectionHeader.xib */; };
+		4CC2508D263805EB00991559 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC2508C263805EA00991559 /* PopularCollectionViewCell.swift */; };
+		4CC25092263805F700991559 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC25091263805F700991559 /* PopularCollectionViewCell.xib */; };
 		4CC3669A262CA35000E76C25 /* UIImageViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC36697262CA34F00E76C25 /* UIImageViewExtentions.swift */; };
 		4CC3669B262CA35000E76C25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC36698262CA35000E76C25 /* Extensions.swift */; };
 		4CC366A1262CA4B800E76C25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC366A0262CA4B800E76C25 /* HomeViewModel.swift */; };
@@ -93,6 +95,8 @@
 		4CB007EA262CDB2200B7ECAB /* MovieDetailsHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsHeaderCell.xib; sourceTree = "<group>"; };
 		4CC25069263743BA00991559 /* HomeSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionHeader.swift; sourceTree = "<group>"; };
 		4CC2506E263743C700991559 /* HomeSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSectionHeader.xib; sourceTree = "<group>"; };
+		4CC2508C263805EA00991559 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CC25091263805F700991559 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
 		4CC36697262CA34F00E76C25 /* UIImageViewExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtentions.swift; sourceTree = "<group>"; };
 		4CC36698262CA35000E76C25 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4CC366A0262CA4B800E76C25 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 				4CC2506E263743C700991559 /* HomeSectionHeader.xib */,
 				4CC366A5262CA5A800E76C25 /* PopularMovieCell.swift */,
 				4CC366AA262CA5B400E76C25 /* PopularMovieCell.xib */,
+				4CC2508C263805EA00991559 /* PopularCollectionViewCell.swift */,
+				4CC25091263805F700991559 /* PopularCollectionViewCell.xib */,
 				4CCD115726356E6500951E83 /* UpcomingCollectionViewCell.swift */,
 				4CCD115C26356E7100951E83 /* UpcomingCollectionViewCell.xib */,
 				4CCD11612635776500951E83 /* UpcomingCell.swift */,
@@ -384,6 +390,7 @@
 				4C431A50262C0CF3009288D3 /* LaunchScreen.storyboard in Resources */,
 				4CB007EB262CDB2200B7ECAB /* MovieDetailsHeaderCell.xib in Resources */,
 				4C455BBB26358CC60000C38F /* UpcomingCell.xib in Resources */,
+				4CC25092263805F700991559 /* PopularCollectionViewCell.xib in Resources */,
 				4CC366AB262CA5B400E76C25 /* PopularMovieCell.xib in Resources */,
 				4CB007E1262CD4F100B7ECAB /* MovieDetailsVideoCell.xib in Resources */,
 				4C431A4D262C0CF3009288D3 /* Assets.xcassets in Resources */,
@@ -524,6 +531,7 @@
 				4CCD11622635776500951E83 /* UpcomingCell.swift in Sources */,
 				4C431A7C262C210A009288D3 /* Movie.swift in Sources */,
 				4C431A45262C0CEF009288D3 /* ViewController.swift in Sources */,
+				4CC2508D263805EB00991559 /* PopularCollectionViewCell.swift in Sources */,
 				4CB007D7262CD02200B7ECAB /* MovieDetailViewController.swift in Sources */,
 				4CC3669B262CA35000E76C25 /* Extensions.swift in Sources */,
 				4CF47017262E1BEE001A4ED8 /* MovieDetailCastCrewInfo.swift in Sources */,
