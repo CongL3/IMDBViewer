@@ -11,6 +11,7 @@ import Reusable
 
 class HomeSectionHeader: UICollectionReusableView, NibReusable {
 	
+	@IBOutlet weak var contentView: UILabel!
 	@IBOutlet weak var titleLabel: UILabel!
 	override func awakeFromNib() {
 		super.awakeFromNib()

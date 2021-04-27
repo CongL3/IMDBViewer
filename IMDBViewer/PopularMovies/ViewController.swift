@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate {
+class ViewController: UIViewController {
 	
 	
 	@IBOutlet weak var collectionView: UICollectionView!
@@ -16,20 +16,24 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		self.title = "Movies"
+		title = "Movies"
 		
-		self.collectionView.delegate = self
-		self.collectionView.dataSource = viewModel
-
+		collectionView.delegate = self
+		collectionView.dataSource = viewModel
+		
 		viewModel.collectionViewDelgate = self
-		self.collectionView.register(cellType: PopularMovieCell.self)
-		self.collectionView.register(cellType: UpcomingCollectionViewCell.self)
-//		self.collectionView.register(HomeSectionHeader.self)
+		collectionView.register(cellType: PopularMovieCell.self)
+		collectionView.register(cellType: UpcomingCollectionViewCell.self)
+		collectionView.register(supplementaryViewType: HomeSectionHeader.self, ofKind: UICollectionView.elementKindSectionHeader)
+		
 		
 		let layout = UICollectionViewFlowLayout.init()
 		layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
+//		layout.sectionHeadersPinToVisibleBounds = true
+		layout.headerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 40)
+		layout.footerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 0)
 		collectionView.collectionViewLayout = layout
 		
 		collectionView.backgroundColor = .white
@@ -37,6 +41,13 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 			self.collectionView.reloadData()
 		}
 	}
+	
+	override func viewWillLayoutSubviews() {
+		super.viewWillLayoutSubviews()
+		
+		collectionView.collectionViewLayout.invalidateLayout()
+	}
+
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		performSegue(withIdentifier: "showMovieDetails", sender: viewModel.list[indexPath.section].movie[indexPath.row])
@@ -52,3 +63,25 @@ class ViewController: UIViewController, UICollectionViewDelegate {
 
 }
 
+
+extension ViewController: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+		
+		if let headerView = collectionView.visibleSupplementaryViews(ofKind: UICollectionView.elementKindSectionHeader).first as? HomeSectionHeader {
+			// Layout to get the right dimensions
+			headerView.layoutIfNeeded()
+			
+			// Automagically get the right height
+			let height = headerView.contentView.systemLayoutSizeFitting(UIView.layoutFittingExpandedSize).height
+			
+			// return the correct size
+			return CGSize(width: collectionView.frame.width, height: height)
+		}
+		
+		// You need this because this delegate method will run at least
+		// once before the header is available for sizing.
+		// Returning zero will stop the delegate from trying to get a supplementary view
+		return CGSize(width: 1, height: 1)
+	}
+	
+}

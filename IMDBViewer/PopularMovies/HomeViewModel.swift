@@ -140,14 +140,31 @@ extension HomeViewModel: UICollectionViewDataSource {
 		return UICollectionViewCell()
 	}
 	
+	
 	func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+		let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeSectionHeader.reuseIdentifier, for: indexPath) as! HomeSectionHeader
+
+		if (kind == UICollectionView.elementKindSectionHeader) {			
+			if indexPath.section == 0 {
+				header.setViewModel(text: "Coming Soon")
+			}
+			
+			if indexPath.section == 1 {
+				header.setViewModel(text: "Popular")
+			}
+		}
 		
-//		if (kind == UICollectionView.elementKindSectionHeader) {
-//			let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: OverviewHeaderCollectionViewCell.reuseIdentifier, for: indexPath)
-//			return header
-//		}
-		
-		return UIView.init() as! UICollectionReusableView
+		return header
 	}
+	
+
+//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
+//
+//		let headerView = self.collectionView(collectionView, viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader, at: ) as! HomeSectionHeader
+//
+//		return CGSize(width: collectionView.bounds.width, height: self.mylabel.bounds.height)
+//	}
+
 
 }
