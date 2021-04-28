@@ -8,7 +8,7 @@ youtube-ios-player-helper, Alamofire, Kingfisher
 
 Current screenshots
 
-<img src="./AppScreenshots/Popular.png" width="200"> <img src="./AppScreenshots/Movie%20Details.png" width="200">
+<img src="./AppScreenshots/Popular2.png" width="200"><img src="./AppScreenshots/Popular.png" width="200"> <img src="./AppScreenshots/Movie%20Details.png" width="200">
 
 
 ToDo :
