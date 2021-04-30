@@ -34,7 +34,6 @@ class UpcomingCell: UICollectionViewCell, NibReusable {
 	}
 
 	func setViewModel(viewModel: Movie) {
-		print("movie ! \(viewModel)")
 		self.titleLabel.text = viewModel.title
 		self.widthConstraint.constant = UIScreen.main.bounds.width + 60
 		self.imageView.kf.setImage(with: URL(string: viewModel.posterUrl))

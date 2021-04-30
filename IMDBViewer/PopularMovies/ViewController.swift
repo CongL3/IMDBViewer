@@ -16,7 +16,6 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		
 		title = "Movies"
 		
 		collectionView.delegate = self
@@ -53,8 +52,6 @@ class ViewController: UIViewController {
 
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		print("indexPath : \(indexPath)")
-		
 
 		if ((collectionView.dataSource?.isKind(of: UpcomingCollectionViewCell.self)) == true) {
 			performSegue(withIdentifier: "showMovieDetails", sender: viewModel.list[indexPath.section].movie[indexPath.row])

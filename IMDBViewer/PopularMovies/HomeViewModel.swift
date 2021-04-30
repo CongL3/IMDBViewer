@@ -55,7 +55,6 @@ class HomeViewModel: NSObject {
 
 	override init() {
 		self.reloadCollectionView = {
-			print("reloadCollectionView")
 		}
 		
 		super.init()
@@ -72,7 +71,6 @@ class HomeViewModel: NSObject {
 				if let films = try? decoder.decode(MovieListResponse.self, from: data) {
 
 					self.list[0].movie = films.movies
-					print("number of movies \(films.movies.count)")
 				}
 			} catch {
 			}
