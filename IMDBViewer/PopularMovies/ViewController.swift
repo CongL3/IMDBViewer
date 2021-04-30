@@ -33,15 +33,14 @@ class ViewController: UIViewController {
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
 		layout.headerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 60)
-
-		layout.footerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 0)
+//		layout.footerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 5)
 		collectionView.collectionViewLayout = layout
 		
 		viewModel.reloadCollectionView = {
 			self.collectionView.reloadData()
 		}
 		collectionView.backgroundColor = .clear
-		view.backgroundColor = UIColor.init(rgb: 219, green: 232, blue: 244, alpha: 1)
+		view.backgroundColor = UIColor.init(rgb: 255, green: 206, blue: 0, alpha: 1)
 	}
 	
 	override func viewWillLayoutSubviews() {

@@ -156,6 +156,15 @@ extension HomeViewModel: UICollectionViewDataSource {
 			}
 		}
 		
+		if (kind == UICollectionView.elementKindSectionFooter) {
+			header.setViewModel(text: "")
+			
+			if indexPath.section == 1 {
+				header.setViewModel(text: "Popular")
+			}
+		}
+
+		
 		return header
 	}
 	
