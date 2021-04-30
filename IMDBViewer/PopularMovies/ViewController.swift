@@ -21,7 +21,8 @@ class ViewController: UIViewController {
 		collectionView.delegate = self
 		collectionView.dataSource = viewModel
 		
-		viewModel.collectionViewDelgate = self
+		viewModel.collectionViewDelgateA = self
+		viewModel.collectionViewDelgateB = self
 		collectionView.register(cellType: PopularCollectionViewCell.self)
 		collectionView.register(cellType: UpcomingCollectionViewCell.self)
 		
@@ -51,7 +52,15 @@ class ViewController: UIViewController {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		print("indexPath : \(indexPath)")
 		
-		performSegue(withIdentifier: "showMovieDetails", sender: viewModel.list[indexPath.section].movie[indexPath.row])
+
+		if ((collectionView.dataSource?.isKind(of: UpcomingCollectionViewCell.self)) == true) {
+			performSegue(withIdentifier: "showMovieDetails", sender: viewModel.list[indexPath.section].movie[indexPath.row])
+		}
+
+		if ((collectionView.dataSource?.isKind(of: PopularCollectionViewCell.self)) == true) {
+			performSegue(withIdentifier: "showMovieDetails", sender: viewModel.list[1].movie[indexPath.row])
+		}
+		
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

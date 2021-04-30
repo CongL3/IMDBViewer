@@ -21,12 +21,10 @@ class PopularCollectionViewCell: UICollectionViewCell, UICollectionViewDataSourc
 		self.collectionView.register(cellType: PopularSmallMovieCell.self)
 		self.collectionView.dataSource = self
 
-		
-		let layout = UICollectionViewFlowLayout.init()
+		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .horizontal
 		layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-//		layout.itemSize = CGSize.init(width: 200, height: self.collectionView.frame.height)
 		collectionView.collectionViewLayout = layout
 	}
 	

@@ -29,7 +29,10 @@ class HomeViewModel: NSObject {
 	
 	var list: [HomeCellViewModel] = [HomeCellViewModel(), HomeCellViewModel()]
 	var reloadCollectionView: () -> Void
-	var collectionViewDelgate: UICollectionViewDelegate?
+	var collectionViewDelgateA: UICollectionViewDelegate?
+	var collectionViewDelgateB: UICollectionViewDelegate?
+
+	
 	var popular: HomeCellViewModel {
 		get {
 			return list[1]
@@ -120,13 +123,13 @@ extension HomeViewModel: UICollectionViewDataSource {
 			if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.reuseIdentifier, for: indexPath) as? UpcomingCollectionViewCell {
 				
 				cell.setViewModel(viewModel: list[indexPath.section])
-				cell.setCollectionViewDelegate(delegate: collectionViewDelgate!)
+				cell.setCollectionViewDelegate(delegate: collectionViewDelgateA!)
 				return cell
 			}
 		case .popular:
 			if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.reuseIdentifier, for: indexPath) as? PopularCollectionViewCell {
 				cell.setViewModel(viewModel: list[indexPath.section])
-				cell.setCollectionViewDelegate(delegate: collectionViewDelgate!)
+				cell.setCollectionViewDelegate(delegate: collectionViewDelgateB!)
 
 //				cell.setViewModel(viewModel: list[indexPath.section].movie[indexPath.row])
 				
