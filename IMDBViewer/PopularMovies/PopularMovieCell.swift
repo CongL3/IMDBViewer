@@ -34,6 +34,11 @@ class PopularMovieCell: UICollectionViewCell, NibReusable {
 		self.ratingsLabel.text = "\(movie.voteAverage)/10"
 		self.releaseDateLabel.text = movie.releaseDate
 		self.overViewLabel.text = movie.overview
+
+//		titleLabel.textColor = .fontColor
+//		ratingsLabel.textColor = .fontColor
+//		releaseDateLabel.textColor = .fontColor
+//		overViewLabel.textColor = .fontColor
 	}
 	
 	override func awakeFromNib() {

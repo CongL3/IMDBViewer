@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		
 		title = "Movies"
 		
 		collectionView.delegate = self
@@ -29,17 +30,19 @@ class ViewController: UIViewController {
 		collectionView.register(supplementaryViewType: HomeSectionHeader.self, ofKind: UICollectionView.elementKindSectionHeader)
 		
 		let layout = UICollectionViewFlowLayout.init()
-		layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+		layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
-		layout.headerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 40)
+		layout.headerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 60)
+
 		layout.footerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 0)
 		collectionView.collectionViewLayout = layout
 		
-		collectionView.backgroundColor = .white
 		viewModel.reloadCollectionView = {
 			self.collectionView.reloadData()
 		}
+		collectionView.backgroundColor = .clear
+		view.backgroundColor = UIColor.init(rgb: 219, green: 232, blue: 244, alpha: 1)
 	}
 	
 	override func viewWillLayoutSubviews() {

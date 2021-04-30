@@ -21,12 +21,15 @@ class UpcomingCollectionViewCell: UICollectionViewCell, UICollectionViewDataSour
 		
 		self.collectionView.register(cellType: UpcomingCell.self)
 		self.collectionView.dataSource = self
-		
+		backgroundColor = .clear
+
 		let layout = UICollectionViewFlowLayout.init()
 		layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 		layout.scrollDirection = .horizontal
 		layout.itemSize = CGSize.init(width: UIScreen.main.bounds.width + 60, height: 230)
 		collectionView.collectionViewLayout = layout
+		collectionView.backgroundColor = .clear
+
 	}
 
 	func setViewModel(viewModel: Any) {

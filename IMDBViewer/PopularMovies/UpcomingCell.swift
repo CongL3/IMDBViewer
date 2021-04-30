@@ -27,8 +27,10 @@ class UpcomingCell: UICollectionViewCell, NibReusable {
 		layer.shadowColor = UIColor.black.cgColor
 		
 		// add corner radius on `contentView`
-		contentView.backgroundColor = .white
 		contentView.layer.cornerRadius = 25
+
+		titleLabel.textColor = .white
+		releaseDateLabel.textColor = .white
 	}
 
 	func setViewModel(viewModel: Movie) {

@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,24 +18,21 @@
                     <rect key="frame" x="20" y="44" width="374" height="114"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryS-Yu-Bqu">
-                            <rect key="frame" x="20" y="0.0" width="334" height="20.5"/>
-                            <color key="backgroundColor" systemColor="systemGrayColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="20" y="0.0" width="334" height="114"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
                         <constraint firstItem="ryS-Yu-Bqu" firstAttribute="leading" secondItem="Sy3-v8-Nus" secondAttribute="leading" constant="20" id="SWy-XG-lHj"/>
                         <constraint firstItem="ryS-Yu-Bqu" firstAttribute="top" secondItem="Sy3-v8-Nus" secondAttribute="top" id="jnW-5q-PYI"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ryS-Yu-Bqu" secondAttribute="bottom" id="xEK-Sp-RlD"/>
+                        <constraint firstAttribute="bottom" secondItem="ryS-Yu-Bqu" secondAttribute="bottom" id="xEK-Sp-RlD"/>
                         <constraint firstAttribute="trailing" secondItem="ryS-Yu-Bqu" secondAttribute="trailing" constant="20" id="yKu-Jc-TCr"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="GvJ-JG-DaQ"/>
-            <color key="backgroundColor" systemColor="systemRedColor"/>
             <constraints>
                 <constraint firstAttribute="trailingMargin" secondItem="Sy3-v8-Nus" secondAttribute="trailing" id="Mi6-sk-STb"/>
                 <constraint firstItem="Sy3-v8-Nus" firstAttribute="top" secondItem="9cj-c6-jfw" secondAttribute="topMargin" id="SC3-K9-Jfc"/>
@@ -50,15 +46,4 @@
             <point key="canvasLocation" x="-159.42028985507247" y="22.767857142857142"/>
         </collectionReusableView>
     </objects>
-    <resources>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

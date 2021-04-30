@@ -24,6 +24,16 @@ class PopularSmallMovieCell: UICollectionViewCell, NibReusable {
 		
 		imageView.layer.cornerRadius = 10
 		imageView.clipsToBounds = true
+		backgroundColor = .clear
+		titleLabel.textColor = .fontColor
+		ratingsLabel.textColor = .fontColor
+		
+		layer.masksToBounds = false
+		layer.shadowOpacity = 0.23
+		layer.shadowRadius = 4
+		layer.shadowOffset = CGSize(width: 0, height: 0)
+		layer.shadowColor = UIColor.black.cgColor
+
 	}
 	
 	func setViewModel(viewModel: Any) {

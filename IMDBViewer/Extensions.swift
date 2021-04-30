@@ -19,6 +19,11 @@ extension UIColor {
    convenience init(rgb red: Int, green: Int, blue: Int, alpha: CGFloat) {
 	 self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: alpha)
    }
+	
+	class var fontColor:UIColor {
+		return .black
+	}
+
 }
 
 extension UIImageView {

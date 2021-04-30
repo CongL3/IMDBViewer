@@ -26,6 +26,10 @@ class PopularCollectionViewCell: UICollectionViewCell, UICollectionViewDataSourc
 		layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		collectionView.collectionViewLayout = layout
+		
+		backgroundColor = .clear
+		collectionView.backgroundColor = .clear
+
 	}
 	
 	func setViewModel(viewModel: Any) {

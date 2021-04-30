@@ -15,7 +15,7 @@ class HomeSectionHeader: UICollectionReusableView, NibReusable {
 	@IBOutlet weak var titleLabel: UILabel!
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		// Initialization code
+		titleLabel.textColor = .fontColor
 	}
 	
 	func setViewModel(text: String) {
