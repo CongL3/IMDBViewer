@@ -22,7 +22,6 @@ class ViewController: UIViewController {
 		collectionView.dataSource = viewModel
 		
 		viewModel.collectionViewDelgate = self
-//		collectionView.register(cellType: PopularMovieCell.self)
 		collectionView.register(cellType: PopularCollectionViewCell.self)
 		collectionView.register(cellType: UpcomingCollectionViewCell.self)
 		
@@ -50,6 +49,8 @@ class ViewController: UIViewController {
 
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		print("indexPath : \(indexPath)")
+		
 		performSegue(withIdentifier: "showMovieDetails", sender: viewModel.list[indexPath.section].movie[indexPath.row])
 	}
 	

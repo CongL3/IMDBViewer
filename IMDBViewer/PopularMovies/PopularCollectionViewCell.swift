@@ -40,7 +40,6 @@ class PopularCollectionViewCell: UICollectionViewCell, UICollectionViewDataSourc
 		self.collectionView.delegate = delegate
 	}
 	
-	
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1
 	}

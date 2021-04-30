@@ -113,8 +113,6 @@ extension HomeViewModel: UICollectionViewDataSource {
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let movie = list[indexPath.section]
-		let cellIdentifier = list[indexPath.section].cellIdentifier
 
 		switch list[indexPath.section].type {
 		case .upcoming:
@@ -122,12 +120,13 @@ extension HomeViewModel: UICollectionViewDataSource {
 			if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.reuseIdentifier, for: indexPath) as? UpcomingCollectionViewCell {
 				
 				cell.setViewModel(viewModel: list[indexPath.section])
-				cell.setCollectionViewDelegate(delegate: collectionViewDelgate as! UICollectionViewDelegate)
+				cell.setCollectionViewDelegate(delegate: collectionViewDelgate!)
 				return cell
 			}
 		case .popular:
 			if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.reuseIdentifier, for: indexPath) as? PopularCollectionViewCell {
 				cell.setViewModel(viewModel: list[indexPath.section])
+				cell.setCollectionViewDelegate(delegate: collectionViewDelgate!)
 
 //				cell.setViewModel(viewModel: list[indexPath.section].movie[indexPath.row])
 				
