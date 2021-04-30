@@ -19,7 +19,7 @@ class UpcomingCell: UICollectionViewCell, NibReusable {
 	@IBOutlet weak var titleLabel: UILabel!
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		backgroundColor = .clear // very important
+		backgroundColor = .clear
 		layer.masksToBounds = false
 		layer.shadowOpacity = 0.23
 		layer.shadowRadius = 4

@@ -18,15 +18,15 @@ class PopularCollectionViewCell: UICollectionViewCell, UICollectionViewDataSourc
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		
-		self.collectionView.register(cellType: PopularMovieCell.self)
+		self.collectionView.register(cellType: PopularSmallMovieCell.self)
 		self.collectionView.dataSource = self
 
-		self.collectionView.backgroundColor = .black
 		
 		let layout = UICollectionViewFlowLayout.init()
-		layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
 		layout.scrollDirection = .horizontal
-		layout.itemSize = CGSize.init(width: 120, height: 150)
+		layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//		layout.itemSize = CGSize.init(width: 200, height: self.collectionView.frame.height)
 		collectionView.collectionViewLayout = layout
 	}
 	
@@ -51,7 +51,7 @@ class PopularCollectionViewCell: UICollectionViewCell, UICollectionViewDataSourc
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularMovieCell.reuseIdentifier, for: indexPath) as? PopularMovieCell {
+		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularSmallMovieCell.reuseIdentifier, for: indexPath) as? PopularSmallMovieCell {
 			
 			cell.setViewModel(viewModel: viewModel[indexPath.row])
 			return cell

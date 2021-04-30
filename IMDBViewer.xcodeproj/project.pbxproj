@@ -21,6 +21,8 @@
 		4C431A84262C2BFA009288D3 /* FilmResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C431A80262C27FE009288D3 /* FilmResponse.json */; };
 		4C431A89262C353A009288D3 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C431A88262C353A009288D3 /* Rating.swift */; };
 		4C455BBB26358CC60000C38F /* UpcomingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C455BBA26358CC60000C38F /* UpcomingCell.xib */; };
+		4C67E7EB263BC87A001EC9E1 /* PopularSmallMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67E7EA263BC87A001EC9E1 /* PopularSmallMovieCell.swift */; };
+		4C67E7F3263BC887001EC9E1 /* PopularSmallMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C67E7F2263BC887001EC9E1 /* PopularSmallMovieCell.xib */; };
 		4CA3BF0D262D67A700F5FCB8 /* Pods_IMDBViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8977261474D3629FFF4E4011 /* Pods_IMDBViewer.framework */; };
 		4CB007D7262CD02200B7ECAB /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB007D6262CD02200B7ECAB /* MovieDetailViewController.swift */; };
 		4CB007DC262CD4E300B7ECAB /* MovieDetailsVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB007DB262CD4E300B7ECAB /* MovieDetailsVideoCell.swift */; };
@@ -87,6 +89,8 @@
 		4C431A80262C27FE009288D3 /* FilmResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FilmResponse.json; sourceTree = "<group>"; };
 		4C431A88262C353A009288D3 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		4C455BBA26358CC60000C38F /* UpcomingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingCell.xib; sourceTree = "<group>"; };
+		4C67E7EA263BC87A001EC9E1 /* PopularSmallMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSmallMovieCell.swift; sourceTree = "<group>"; };
+		4C67E7F2263BC887001EC9E1 /* PopularSmallMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularSmallMovieCell.xib; sourceTree = "<group>"; };
 		4CA3BF12262D67C900F5FCB8 /* youtube-ios-player-helper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "youtube-ios-player-helper"; path = "Pods/youtube-ios-player-helper"; sourceTree = "<group>"; };
 		4CB007D6262CD02200B7ECAB /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		4CB007DB262CD4E300B7ECAB /* MovieDetailsVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsVideoCell.swift; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 				4CC366A0262CA4B800E76C25 /* HomeViewModel.swift */,
 				4CC25069263743BA00991559 /* HomeSectionHeader.swift */,
 				4CC2506E263743C700991559 /* HomeSectionHeader.xib */,
+				4C67E7EA263BC87A001EC9E1 /* PopularSmallMovieCell.swift */,
+				4C67E7F2263BC887001EC9E1 /* PopularSmallMovieCell.xib */,
 				4CC366A5262CA5A800E76C25 /* PopularMovieCell.swift */,
 				4CC366AA262CA5B400E76C25 /* PopularMovieCell.xib */,
 				4CC2508C263805EA00991559 /* PopularCollectionViewCell.swift */,
@@ -387,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C431A77262C167D009288D3 /* keys.plist in Resources */,
+				4C67E7F3263BC887001EC9E1 /* PopularSmallMovieCell.xib in Resources */,
 				4C431A50262C0CF3009288D3 /* LaunchScreen.storyboard in Resources */,
 				4CB007EB262CDB2200B7ECAB /* MovieDetailsHeaderCell.xib in Resources */,
 				4C455BBB26358CC60000C38F /* UpcomingCell.xib in Resources */,
@@ -547,6 +554,7 @@
 				4CC2506A263743BA00991559 /* HomeSectionHeader.swift in Sources */,
 				4C431A43262C0CEF009288D3 /* SceneDelegate.swift in Sources */,
 				4CC3669A262CA35000E76C25 /* UIImageViewExtentions.swift in Sources */,
+				4C67E7EB263BC87A001EC9E1 /* PopularSmallMovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
