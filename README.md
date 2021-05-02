@@ -1,10 +1,10 @@
 # IMDBViewer
-Creating a simple app to parse and show films from IMDB
+Creating a simple app to parse and show films from IMDB,
 
 
-Uses these Pods
+Uses these: 
 
-youtube-ios-player-helper, Alamofire, Kingfisher
+MVVM, youtube-ios-player-helper, Alamofire, Kingfisher
 
 Current screenshots
 
