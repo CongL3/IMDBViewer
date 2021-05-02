@@ -59,8 +59,5 @@ class PopularCollectionViewCell: UICollectionViewCell, UICollectionViewDataSourc
 		}
 		
 		return UICollectionViewCell()
-	}
-	
-	
-	
+	}	
 }

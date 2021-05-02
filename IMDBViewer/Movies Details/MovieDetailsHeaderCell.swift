@@ -19,18 +19,15 @@ class MovieDetailsHeaderCell: UICollectionReusableView, Reusable {
 	@IBOutlet weak var producerNameLabel: UILabel!
 	override init(frame: CGRect) {
 	   super.init(frame: frame)
-//	   self.backgroundColor = UIColor.purple
 
 	}
 
 	required init?(coder aDecoder: NSCoder) {
 	   super.init(coder: aDecoder)
-
 	}
 
 	override class func awakeFromNib() {
 		super.awakeFromNib()
-		
 	}
 
 	func setViewModel(viewModel: MovieDetailViewModel) {

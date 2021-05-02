@@ -106,11 +106,7 @@ extension HomeViewModel: UICollectionViewDataSource {
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//		if section == 0 {
-			return list[section].movie.count == 0 ? 0 : 1
-//		}
-		
-//		return list[section].movie.count
+		return list[section].movie.count == 0 ? 0 : 1
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -128,8 +124,6 @@ extension HomeViewModel: UICollectionViewDataSource {
 			if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.reuseIdentifier, for: indexPath) as? PopularCollectionViewCell {
 				cell.setViewModel(viewModel: list[indexPath.section])
 				cell.setCollectionViewDelegate(delegate: collectionViewDelgateB!)
-
-//				cell.setViewModel(viewModel: list[indexPath.section].movie[indexPath.row])
 				
 				return cell
 			}
@@ -167,14 +161,5 @@ extension HomeViewModel: UICollectionViewDataSource {
 		
 		return header
 	}
-	
-
-//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
-//
-//		let headerView = self.collectionView(collectionView, viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader, at: ) as! HomeSectionHeader
-//
-//		return CGSize(width: collectionView.bounds.width, height: self.mylabel.bounds.height)
-//	}
-
 
 }

@@ -11,7 +11,6 @@ import Reusable
 
 class UpcomingCollectionViewCell: UICollectionViewCell, UICollectionViewDataSource, NibReusable {
 	
-	
 	@IBOutlet weak var collectionView: UICollectionView!
 	var viewModel = [Movie]()
 	

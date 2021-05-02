@@ -26,7 +26,6 @@ class UpcomingCell: UICollectionViewCell, NibReusable {
 		layer.shadowOffset = CGSize(width: 0, height: 0)
 		layer.shadowColor = UIColor.black.cgColor
 		
-		// add corner radius on `contentView`
 		contentView.layer.cornerRadius = 25
 
 		titleLabel.textColor = .white

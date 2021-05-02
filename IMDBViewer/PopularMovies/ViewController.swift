@@ -33,7 +33,6 @@ class ViewController: UIViewController {
 		layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 		layout.scrollDirection = .vertical
 		layout.headerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 60)
-//		layout.footerReferenceSize = CGSize.init(width: UIScreen.main.bounds.width, height: 5)
 		collectionView.collectionViewLayout = layout
 		
 		viewModel.reloadCollectionView = {
@@ -77,19 +76,13 @@ extension ViewController: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
 		
 		if let headerView = collectionView.visibleSupplementaryViews(ofKind: UICollectionView.elementKindSectionHeader).first as? HomeSectionHeader {
-			// Layout to get the right dimensions
 			headerView.layoutIfNeeded()
 			
-			// Automagically get the right height
 			let height = headerView.contentView.systemLayoutSizeFitting(UIView.layoutFittingExpandedSize).height
 			
-			// return the correct size
 			return CGSize(width: collectionView.frame.width, height: height)
 		}
 		
-		// You need this because this delegate method will run at least
-		// once before the header is available for sizing.
-		// Returning zero will stop the delegate from trying to get a supplementary view
 		return CGSize(width: 1, height: 1)
 	}
 	
