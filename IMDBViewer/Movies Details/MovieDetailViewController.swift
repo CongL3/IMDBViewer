@@ -47,7 +47,8 @@ class MovieDetailViewController: UIViewController, UICollectionViewDataSource, U
 			self.detailsCell.setMovieTrailer(movieTrailer: self.viewModel.movieTrailer)
 		}
 		
-		
+		view.backgroundColor = UIColor.init(rgb: 255, green: 206, blue: 0, alpha: 1)
+		collectionView.backgroundColor = .clear
 		viewModel.getMovieDetails()
 	}
 	

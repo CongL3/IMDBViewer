@@ -19,7 +19,7 @@ class MovieDetailsVideoCell: UICollectionViewCell, NibReusable {
 	@IBOutlet weak var titleLabel: UILabel!
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		self.backgroundColor = UIColor.green
+		self.backgroundColor = .clear
 		
 	}
 	

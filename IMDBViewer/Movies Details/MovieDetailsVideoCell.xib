@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZB-oq-BvD">
-                        <rect key="frame" x="16" y="18" width="81.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="0.0" y="0.0" width="85" height="32.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCo-FR-5a3">
-                        <rect key="frame" x="16" y="251.5" width="81.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="0.0" y="222.5" width="85" height="23"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Overview" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9do-Wm-LhE">
-                        <rect key="frame" x="16" y="280.5" width="71.5" height="64.5"/>
+                        <rect key="frame" x="0.0" y="253.5" width="75" height="91.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH5-19-zqn" customClass="YTPlayerView">
-                        <rect key="frame" x="20" y="61" width="300" height="160"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <rect key="frame" x="0.0" y="47.5" width="300" height="160"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="xH5-19-zqn" secondAttribute="height" multiplier="15:8" id="IcG-vp-bPN"/>
                             <constraint firstAttribute="height" constant="160" id="zuq-ax-ZPs"/>
@@ -46,18 +45,18 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="ZCo-FR-5a3" secondAttribute="trailing" constant="10" id="8Y8-Nv-Uly"/>
-                    <constraint firstItem="xH5-19-zqn" firstAttribute="leading" secondItem="egc-4q-Gkv" secondAttribute="leading" constant="20" symbolic="YES" id="Bp6-QE-lJl"/>
                     <constraint firstAttribute="trailing" secondItem="9do-Wm-LhE" secondAttribute="trailing" constant="20" id="KCY-LQ-nvQ"/>
-                    <constraint firstItem="9do-Wm-LhE" firstAttribute="leading" secondItem="egc-4q-Gkv" secondAttribute="leading" constant="16" id="L0e-uY-Aig"/>
                     <constraint firstAttribute="trailing" secondItem="xH5-19-zqn" secondAttribute="trailing" constant="20" id="Oh2-9U-bV0"/>
+                    <constraint firstItem="ZCo-FR-5a3" firstAttribute="leading" secondItem="nZB-oq-BvD" secondAttribute="leading" id="YS3-Fq-BRi"/>
+                    <constraint firstItem="9do-Wm-LhE" firstAttribute="leading" secondItem="nZB-oq-BvD" secondAttribute="leading" id="YSK-5x-oqU"/>
                     <constraint firstItem="9do-Wm-LhE" firstAttribute="top" secondItem="ZCo-FR-5a3" secondAttribute="bottom" constant="8" symbolic="YES" id="ZBb-s1-2JJ"/>
                     <constraint firstAttribute="bottom" secondItem="9do-Wm-LhE" secondAttribute="bottom" constant="10" id="aZo-nj-xnw"/>
-                    <constraint firstItem="ZCo-FR-5a3" firstAttribute="top" secondItem="xH5-19-zqn" secondAttribute="bottom" constant="30.5" id="cvc-hm-1Np"/>
-                    <constraint firstItem="ZCo-FR-5a3" firstAttribute="leading" secondItem="egc-4q-Gkv" secondAttribute="leading" constant="16" id="epG-Ql-Kd2"/>
-                    <constraint firstItem="xH5-19-zqn" firstAttribute="top" secondItem="nZB-oq-BvD" secondAttribute="bottom" constant="22.5" id="jRT-f9-id3"/>
-                    <constraint firstItem="nZB-oq-BvD" firstAttribute="top" secondItem="egc-4q-Gkv" secondAttribute="top" constant="18" id="spf-PX-Xmw"/>
+                    <constraint firstItem="ZCo-FR-5a3" firstAttribute="top" secondItem="xH5-19-zqn" secondAttribute="bottom" constant="15" id="cvc-hm-1Np"/>
+                    <constraint firstItem="xH5-19-zqn" firstAttribute="leading" secondItem="nZB-oq-BvD" secondAttribute="leading" id="eaF-8u-jFw"/>
+                    <constraint firstItem="xH5-19-zqn" firstAttribute="top" secondItem="nZB-oq-BvD" secondAttribute="bottom" constant="15" id="jRT-f9-id3"/>
+                    <constraint firstItem="nZB-oq-BvD" firstAttribute="top" secondItem="egc-4q-Gkv" secondAttribute="top" id="spf-PX-Xmw"/>
                     <constraint firstAttribute="trailing" secondItem="nZB-oq-BvD" secondAttribute="trailing" constant="10" id="sts-S5-HXa"/>
-                    <constraint firstItem="nZB-oq-BvD" firstAttribute="leading" secondItem="egc-4q-Gkv" secondAttribute="leading" constant="16" id="vUt-5c-WZe"/>
+                    <constraint firstItem="nZB-oq-BvD" firstAttribute="leading" secondItem="egc-4q-Gkv" secondAttribute="leading" id="vUt-5c-WZe"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="370" height="355"/>
@@ -71,9 +70,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="78.683035714285708"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

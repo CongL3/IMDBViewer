@@ -26,8 +26,10 @@ class MovieDetailsHeaderCell: UICollectionReusableView, Reusable {
 	   super.init(coder: aDecoder)
 	}
 
-	override class func awakeFromNib() {
+	override func awakeFromNib() {
 		super.awakeFromNib()
+		imageView.layer.cornerRadius = 10
+		imageView.clipsToBounds = true
 	}
 
 	func setViewModel(viewModel: MovieDetailViewModel) {
