@@ -18,7 +18,7 @@
                     <rect key="frame" x="20" y="44" width="374" height="114"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryS-Yu-Bqu">
-                            <rect key="frame" x="0.0" y="0.0" width="354" height="114"/>
+                            <rect key="frame" x="30" y="0.0" width="324" height="114"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="GvJ-JG-DaQ"/>
             <constraints>
-                <constraint firstItem="ryS-Yu-Bqu" firstAttribute="leading" secondItem="GvJ-JG-DaQ" secondAttribute="leading" constant="20" id="12l-eq-IW0"/>
+                <constraint firstItem="ryS-Yu-Bqu" firstAttribute="leading" secondItem="Sy3-v8-Nus" secondAttribute="leading" constant="30" id="12l-eq-IW0"/>
                 <constraint firstAttribute="trailingMargin" secondItem="Sy3-v8-Nus" secondAttribute="trailing" id="Mi6-sk-STb"/>
                 <constraint firstItem="Sy3-v8-Nus" firstAttribute="top" secondItem="9cj-c6-jfw" secondAttribute="topMargin" id="SC3-K9-Jfc"/>
                 <constraint firstAttribute="bottomMargin" secondItem="Sy3-v8-Nus" secondAttribute="bottom" id="Tww-Cw-Y1J"/>
