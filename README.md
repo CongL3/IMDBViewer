@@ -8,6 +8,7 @@ youtube-ios-player-helper, Alamofire, Kingfisher
 
 Current screenshots
 
+<img src="./AppScreenshots/IMDBApp.gif" width="200">
 <img src="./AppScreenshots/Popular4.png" width="200"><img src="./AppScreenshots/details2.png" width="200">
 
 
